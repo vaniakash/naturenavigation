@@ -1,0 +1,269 @@
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 5rem;
+    background: url('/mountains.webp');
+    /* Fallback */
+    background-size: cover;
+    background-position: center 30%;
+}
+
+/* Overlay for hero text readability if needed, though image shows clean text on sky */
+.heroContent {
+    z-index: 2;
+    padding-top: 5rem;
+    /* Push down to fit under navbar */
+}
+
+.heroTitle {
+    font-family: 'Times New Roman', Times, serif;
+    /* Matching the serif look in image */
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #334155;
+    /* Dark grey/slate */
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.heroSubtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #475569;
+    letter-spacing: 0.5px;
+}
+
+/* Sections General */
+.section {
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+.heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+/* Mission Section (Text Left, Images Right) */
+.missionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.missionImages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.missionImg {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Expertise Section (Images Left, Text Right) */
+.expertiseGrid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.expertiseImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.expertiseImg {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.expertiseList {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.expertiseList li {
+    font-family: 'Outfit', sans-serif;
+    color: #334155;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-weight: 500;
+}
+
+.expertiseList li::before {
+    content: "•";
+    color: #10b981;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Founder Section */
+.founderSection {
+    background: #fff;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.founderGrid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.founderImageWrapper {
+    position: relative;
+    height: 600px;
+    /* Taller to fit full portrait */
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.founderName {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.25rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.founderRole {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #10b981;
+    /* Green accent */
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Why Choose Us */
+.whyChooseSection {
+    background: #f8fafc;
+    padding: 5rem 0;
+    margin-top: 5rem;
+}
+
+.whyGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.featureCard {
+    padding: 1rem;
+}
+
+.iconWrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    color: #b45309;
+    /* Gold/Bronze color from image */
+}
+
+.featureTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.featureText {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+/* Philosophy Section */
+.philosophySection {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6rem 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+    .missionGrid,
+    .expertiseGrid,
+    .founderGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .missionImages {
+        order: -1;
+        /* Images on top for mobile */
+    }
+
+    .expertiseImages {
+        order: -1;
+    }
+
+    .founderImageWrapper {
+        height: 400px;
+        /* Adjust height for mobile */
+    }
+
+    .whyGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+}

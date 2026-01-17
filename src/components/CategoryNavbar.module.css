@@ -1,0 +1,83 @@
+.categoryNavbar {
+    background-color: #FFC800;
+    /* Vivid yellow matching IndiaHikes/User request */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 950;
+    /* Below navbar (1000) */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar IE/Edge */
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    justify-content: center;
+    /* Center initially */
+    min-width: max-content;
+    /* Ensure it doesn't wrap awkwardly */
+}
+
+/* On smaller screens, allow left alignment for scrolling */
+@media (max-width: 1024px) {
+    .navList {
+        justify-content: flex-start;
+    }
+}
+
+.navItem {
+    position: relative;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.85rem 1.25rem;
+    color: #000000;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.navLink:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Slight darken on hover */
+}
+
+.dropdownIcon {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-left: 0.25rem;
+}
+
+/* Divider lines between items if needed, but IndiaHikes serves them clean. 
+   We can add separator logic if requested. */

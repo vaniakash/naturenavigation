@@ -1,0 +1,163 @@
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+.title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* Card Styles - Overlay Design */
+.card {
+    position: relative;
+    height: 250px;
+    /* Reduced to ~half */
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.1) 30%,
+            rgba(0, 0, 0, 0.9) 100%);
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 2;
+    color: white;
+}
+
+.cardTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    display: -webkit-box;
+
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.tags {
+    display: none;
+    /* Hide tags on small cards to save space, or make very small */
+}
+
+/* Optional: if user really wants tags, we can keep them but very small. 
+   For "half size" mostly implied keeping layout but smaller. 
+   Let's keep tags but only show first one or make compact. 
+   Actually, reducing height to 250px leaves little room.
+   Let's toggle: Hide tags for the "half size" look purely visual?
+   Let's keep tags but simpler. */
+
+.viewBtn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    background: #10b981;
+    color: white;
+    font-weight: 600;
+    border-radius: 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.viewBtn:hover {
+    background: #059669;
+    transform: translateY(-1px);
+}
+
+/* Expert CTA Section */
+.expertSection {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 4rem 2rem;
+    background: #f8fafc;
+    border-radius: 2rem;
+}
+
+.expertTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.expertText {
+    color: #64748b;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.expertBtn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #10b981;
+    color: white;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.expertBtn:hover {
+    background: #059669;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}

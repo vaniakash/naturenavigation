@@ -1,0 +1,270 @@
+/* Main Container */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url('/harkidun.webp');
+    /* Use a nice mountain back */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 4rem;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    padding-top: 2rem;
+}
+
+.heroSmall {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.heroTitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroSubtitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Main Content Grid */
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 4rem;
+    padding-bottom: 5rem;
+}
+
+/* Left Column: Text */
+.leftColumn {}
+
+.leftTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.leftText {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+/* Middle Column: Form */
+.formTitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input,
+.select,
+.textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 2rem;
+    /* Rounded inputs as per image */
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    background: #fdfdfd;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.textarea {
+    border-radius: 1.5rem;
+    resize: vertical;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+    border-color: #10b981;
+}
+
+.fullWidth {
+    grid-column: span 2;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #1f3a2b;
+    /* Dark Green from image */
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submitBtn:hover {
+    background-color: #16291f;
+}
+
+.submitBtn:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* Right Column: Info */
+.infoSection {
+    margin-bottom: 3rem;
+}
+
+.infoTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.infoText {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* Emergency Box */
+.emergencyBox {
+    border: 1px solid #b45309;
+    /* Gold border */
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    background: #fffcf8;
+}
+
+.emergencyTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.emergencyText {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.emergencyNumber {
+    font-weight: 700;
+    color: #1a1a1a;
+    display: block;
+}
+
+/* Map Container */
+.mapContainer {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Messages */
+.successMsg {
+    width: 100%;
+    padding: 1rem;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.errorMsg {
+    width: 100%;
+    padding: 1rem;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .mainGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .fullWidth {
+        grid-column: span 1;
+    }
+}

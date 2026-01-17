@@ -1,0 +1,311 @@
+.footer {
+    background: var(--dark-secondary);
+    color: white;
+    padding: 3rem 1rem 1rem;
+    margin-top: 3rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Brand Section */
+.brandSection {
+    text-align: center;
+}
+
+.logoWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+}
+
+.brandName {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.brandDescription {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Sections */
+.linksSection,
+.contactSection,
+.socialSection {
+    text-align: center;
+}
+
+.sectionTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Quick Links */
+.linkList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    align-items: center;
+}
+
+.link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--primary);
+}
+
+/* Contact */
+.contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    align-items: center;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.contactItem:hover {
+    color: var(--primary);
+}
+
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+    color: var(--primary);
+}
+
+.contactText {
+    display: inline;
+}
+
+/* Social Media */
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.socialLink {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.socialIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Collapsible Legal - Mobile Only */
+.legalAccordion {
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+.legalToggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.legalToggle:hover {
+    opacity: 0.8;
+}
+
+.chevron {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.chevronOpen {
+    transform: rotate(180deg);
+}
+
+.legalLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.legalLink {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.legalLink:hover {
+    color: var(--primary);
+}
+
+/* Legal Desktop - Hidden on Mobile */
+.legalDesktop {
+    display: none;
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Bottom Bar */
+.bottomBar {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+}
+
+.designer {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+}
+
+.designerLink {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.designerLink:hover {
+    opacity: 0.8;
+}
+
+/* Tablet - 640px+ */
+@media (min-width: 640px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    .brandSection {
+        text-align: left;
+        grid-column: 1 / -1;
+    }
+
+    .logoWrapper {
+        justify-content: flex-start;
+    }
+
+    .brandDescription {
+        margin: 0;
+    }
+
+    .linksSection,
+    .contactSection,
+    .socialSection {
+        text-align: left;
+    }
+
+    .linkList,
+    .contactList,
+    .socialLinks {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .legalAccordion {
+        display: none;
+    }
+
+    .legalDesktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .bottomBar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Desktop - 1024px+ */
+@media (min-width: 1024px) {
+    .footer {
+        padding: 4rem 2rem 1.5rem;
+    }
+
+    .container {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .brandSection {
+        grid-column: auto;
+    }
+}
