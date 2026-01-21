@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/grid-bg.png'), radial-gradient(circle at 15% 50%, rgba(16, 185, 129, 0.08), transparent 25%), radial-gradient(circle at 85% 30%, rgba(5, 150, 105, 0.08), transparent 25%);
+    background-image: radial-gradient(circle at 15% 50%, rgba(16, 185, 129, 0.08), transparent 25%), radial-gradient(circle at 85% 30%, rgba(5, 150, 105, 0.08), transparent 25%);
     background-color: #0f172a;
     padding: 2rem;
 }
