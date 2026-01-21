@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
 import { SessionProvider } from 'next-auth/react';
@@ -19,7 +19,12 @@ export const metadata: Metadata = {
   title: "Nature Navigation - Trekking in Uttarakhand",
   description: "Join Nature Navigation for unforgettable trekking experiences across Uttarakhand. Based in Uttarkashi, we organize premium treks throughout the Himalayas.",
   keywords: "trekking, uttarakhand, uttarkashi, hiking, himalaya, adventure, nature",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
