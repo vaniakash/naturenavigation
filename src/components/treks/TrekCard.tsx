@@ -2,52 +2,84 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Calendar, Mountain, MapPin, Clock, IndianRupee } from 'lucide-react';
 import { Trek } from '@/data/treks';
 import styles from './TrekCard.module.css';
 
 interface TrekCardProps {
     trek: Trek;
+    index?: number;
 }
 
-export default function TrekCard({ trek }: TrekCardProps) {
+export default function TrekCard({ trek, index = 0 }: TrekCardProps) {
     return (
-        <div className={styles.card}>
-            <div className={styles.imageContainer}>
-                <Image
-                    src={trek.image}
-                    alt={trek.name}
-                    fill
-                    className={styles.image}
-                />
-                <span className={styles.badge}>{trek.difficulty}</span>
-            </div>
-
-            <div className={styles.content}>
-                <div className={styles.header}>
-                    <h3 className={styles.title}>{trek.name}</h3>
-                    <span className={styles.subtitle}>{trek.description.substring(0, 60)}...</span>
-                </div>
-
-                <div className={styles.detailsGrid}>
-                    <div className={styles.detailItem}>
-                        <span>📅 {trek.duration.split(' ')[0]} Days</span>
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: [0.25, 0.46, 0.45, 0.94]
+            }}
+            whileHover={{ y: -8 }}
+            className={styles.card}
+        >
+            <Link href={`/treks/${trek.id}`} className={styles.cardLink}>
+                <motion.div
+                    className={styles.imageContainer}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    <Image
+                        src={trek.image}
+                        alt={trek.name}
+                        fill
+                        className={styles.image}
+                    />
+                    <div className={styles.imageOverlay} />
+                    <span className={styles.badge}>
+                        <Mountain className={styles.badgeIcon} />
+                        {trek.difficulty}
+                    </span>
+                    <div className={styles.priceTag}>
+                        <IndianRupee className={styles.priceIcon} />
+                        <span>{trek.price.replace('₹', '')}</span>
                     </div>
-                    <div className={styles.detailItem}>
-                        <span>⛰ {trek.difficulty}</span>
-                    </div>
-                </div>
+                </motion.div>
 
-                <div className={styles.footer}>
-                    <div className={styles.actionButtons}>
-                        <Link href={`/treks/${trek.id}`} className={styles.viewDetailsBtn}>
-                            Info
-                        </Link>
-                        <Link href={`/treks/${trek.id}`} className={styles.bookBtn}>
-                            Book
-                        </Link>
+                <div className={styles.content}>
+                    <div className={styles.header}>
+                        <h3 className={styles.title}>{trek.name}</h3>
+                        <p className={styles.subtitle}>{trek.description}</p>
+                    </div>
+
+                    <div className={styles.detailsGrid}>
+                        <div className={styles.detailItem}>
+                            <MapPin className={styles.icon} />
+                            <span>{trek.region}</span>
+                        </div>
+                        <div className={styles.detailItem}>
+                            <Clock className={styles.icon} />
+                            <span>{trek.duration.split(' ')[0]} Days</span>
+                        </div>
+                        <div className={styles.detailItem}>
+                            <Calendar className={styles.icon} />
+                            <span>{trek.bestSeason.split(',')[0]}</span>
+                        </div>
+                    </div>
+
+                    <div className={styles.footer}>
+                        <motion.div
+                            className={styles.bookBtn}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Book Now
+                        </motion.div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </Link>
+        </motion.div>
     );
 }

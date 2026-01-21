@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import TrekPageHeader from '@/components/treks/TrekPageHeader';
 import TrekFilterSidebar from '@/components/treks/TrekFilterSidebar';
 import TrekCard from '@/components/treks/TrekCard';
 import { treksData } from '@/data/treks';
 import styles from './page.module.css';
-
 import PrivateTrekSection from '@/components/treks/PrivateTrekSection';
 
 export default function TreksPage() {
@@ -60,12 +60,12 @@ export default function TreksPage() {
 
     return (
         <div className={styles.pageContainer}>
-            <TrekPageHeader />
+            <TrekPageHeader totalTreks={treksData.length} />
 
             <div className={styles.contentWrapper}>
                 <div className={styles.layout}>
                     {/* Sidebar */}
-                    <div className={styles.sidebarWrapper}>
+                    <aside className={styles.sidebarWrapper}>
                         <TrekFilterSidebar
                             selectedFilters={selectedFilters}
                             onFilterChange={handleFilterChange}
@@ -73,31 +73,57 @@ export default function TreksPage() {
                             searchQuery={searchQuery}
                             onSearch={setSearchQuery}
                         />
-                    </div>
+                    </aside>
 
                     {/* Main Content */}
-                    <div className={styles.resultSection}>
-                        <div className={styles.resultsHeader}>
+                    <main className={styles.resultSection}>
+                        <motion.div
+                            className={styles.resultsHeader}
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
                             <h2 className={styles.resultsCount}>
-                                Showing {filteredTreks.length} Treks
+                                {filteredTreks.length === treksData.length
+                                    ? `All Treks (${filteredTreks.length})`
+                                    : `Showing ${filteredTreks.length} of ${treksData.length} Treks`
+                                }
                             </h2>
-                            {/* Sort dropdown could go here */}
-                        </div>
+                        </motion.div>
 
                         {filteredTreks.length > 0 ? (
-                            <div className={styles.grid}>
-                                {filteredTreks.map(trek => (
-                                    <TrekCard key={trek.id} trek={trek} />
+                            <motion.div
+                                className={styles.grid}
+                                layout
+                            >
+                                {filteredTreks.map((trek, index) => (
+                                    <TrekCard key={trek.id} trek={trek} index={index} />
                                 ))}
-                            </div>
+                            </motion.div>
                         ) : (
-                            <div className={styles.noResults}>
-                                No treks found matching your filters.
-                            </div>
+                            <motion.div
+                                className={styles.noResults}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <div className={styles.noResultsIcon}>🔍</div>
+                                <h3 className={styles.noResultsTitle}>No treks found</h3>
+                                <p className={styles.noResultsText}>
+                                    Try adjusting your filters or search query
+                                </p>
+                                <button
+                                    className={styles.clearFiltersButton}
+                                    onClick={handleClearFilters}
+                                >
+                                    Clear All Filters
+                                </button>
+                            </motion.div>
                         )}
-                    </div>
+                    </main>
                 </div>
             </div>
+
             <PrivateTrekSection />
         </div>
     );

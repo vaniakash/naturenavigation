@@ -118,6 +118,7 @@ export default function PrivateTrekSection() {
                                 value={formData.trekName}
                                 onChange={handleChange}
                                 className={styles.input}
+                                placeholder="e.g. Kedarkantha or Uttarakhand"
                             />
                         </div>
 
@@ -130,6 +131,7 @@ export default function PrivateTrekSection() {
                                 value={formData.groupSize}
                                 onChange={handleChange}
                                 className={styles.input}
+                                placeholder="Number of people"
                             />
                         </div>
 
@@ -142,6 +144,7 @@ export default function PrivateTrekSection() {
                                 value={formData.dates}
                                 onChange={handleChange}
                                 className={styles.input}
+                                placeholder="e.g. Mid May 2024"
                             />
                         </div>
 
@@ -153,6 +156,7 @@ export default function PrivateTrekSection() {
                                 value={formData.message}
                                 onChange={handleChange}
                                 className={styles.textarea}
+                                placeholder="Tell us more about your preferences..."
                             ></textarea>
                         </div>
 
