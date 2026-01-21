@@ -1,32 +1,64 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { MapPin } from 'lucide-react';
 import DestinationsGrid from '@/components/DestinationsGrid';
 import FAQSection from '@/components/FAQSection';
 import styles from './page.module.css';
-import Link from 'next/link';
 
 export default function DestinationsPage() {
     return (
         <>
-            <div>
-                {/* Custom Hero for Destinations */}
-                <section className={styles.hero} style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/back.webp')" }}>
-                    <div className={styles.heroContent}>
-                        <h1 className={styles.title}>Explore Destinations</h1>
-                        <p className={styles.subtitle}>
-                            Discover the most loved trekking regions of Uttarakhand
-                        </p>
-                        <Link href="/treks" className={styles.ctaBtn}>
-                            View All Treks
-                        </Link>
-                    </div>
-                </section>
+            {/* Simplified Hero Section */}
+            <section className={styles.hero}>
+                <div className={styles.heroBackground} />
 
-                {/* Destinations Grid */}
-                <DestinationsGrid />
+                <div className={styles.heroContent}>
+                    <motion.div
+                        className={styles.iconWrapper}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ type: 'spring', stiffness: 200, delay: 0.2 }}
+                    >
+                        <MapPin className={styles.heroIcon} />
+                    </motion.div>
 
-                {/* FAQ Section */}
-                <div style={{ marginBottom: '4rem' }}>
-                    <FAQSection />
+                    <motion.h1
+                        className={styles.heroTitle}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                    >
+                        Trekking & Spiritual Destinations
+                    </motion.h1>
+
+                    <motion.p
+                        className={styles.heroSubtitle}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                    >
+                        Explore Himalayan regions, pilgrimage circuits, and sacred valleys
+                    </motion.p>
+
+                    <motion.div
+                        className={styles.statBadge}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                    >
+                        <span className={styles.statNumber}>10+</span>
+                        <span className={styles.statLabel}>Destinations Covered</span>
+                    </motion.div>
                 </div>
+            </section>
+
+            {/* Destinations Grid */}
+            <DestinationsGrid />
+
+            {/* FAQ Section */}
+            <div style={{ marginBottom: '4rem' }}>
+                <FAQSection />
             </div>
         </>
     );
