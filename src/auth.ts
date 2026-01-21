@@ -8,6 +8,7 @@ import User from '@/models/User';
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
     ...authConfig,
+    secret: process.env.NEXTAUTH_SECRET,
     providers: [
         Google({
             clientId: process.env.GOOGLE_CLIENT_ID,
