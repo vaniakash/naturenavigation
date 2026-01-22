@@ -164,7 +164,7 @@ The summit offers panoramic views of major Himalayan peaks, making the climb bot
         heroTitle: 'EXPLORE HIMALAYAN MEADOWS',
         heroSubtitle: 'A UNESCO World Heritage Site trek famous for its vibrant alpine flowers, scenic valleys, and serene Himalayan landscapes—perfect for nature lovers and beginners.',
 
-        region: 'Garhwal Himalaya',
+        region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Easy – Moderate',
         duration: '6 Days',
         durationDays: 6,
@@ -275,7 +275,7 @@ Surrounded by snow-capped peaks, waterfalls, and glacial streams, the valley off
         heroTitle: 'EXPLORE THE VALLEY OF GODS',
         heroSubtitle: 'An ancient trail through pristine Himalayan valleys, offering rich culture, stunning landscapes, and a glimpse of traditional mountain life.',
 
-        region: 'Garhwal Himalaya',
+        region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Moderate',
         duration: '7 Days',
         durationDays: 7,
@@ -440,5 +440,291 @@ The valley is steeped in mythology and offers stunning views of Swargarohini pea
         price: '₹8,500',
         image: '/kedarkantha.webp',
         description: 'One of the most beautiful high altitude meadows in India.'
+    },
+    {
+        id: 7,
+        slug: 'bhrigu-lake',
+        name: 'Bhrigu Lake Trek',
+        heroTitle: 'EXPLORE SACRED HIMALAYAN LAKES',
+        heroSubtitle: 'A high-altitude alpine lake trek near Manali, known for vast grasslands, snow patches, and strong mythological significance—perfect for beginners seeking quick Himalayan exposure.',
+
+        region: 'Himachal Pradesh (Kullu Valley)',
+        difficulty: 'Easy – Moderate',
+        duration: '2–3 Days',
+        durationDays: 3,
+        altitude: '14,100 ft',
+        bestSeason: 'May – October',
+        seasons: ['Summer', 'Autumn'],
+
+        image: '/himachal/bhrigu-lake-trek-himachal.webp',
+
+        description: 'A high-altitude alpine lake trek near Manali, known for vast grasslands and mythological significance.',
+        longDescription: `The Bhrigu Lake Trek is one of the easiest high-altitude lake treks in the Indian Himalayas. Located near Manali, this trek is famous for its wide alpine meadows, panoramic views of snow-covered peaks, and the sacred Bhrigu Lake, believed to be the meditation site of Maharishi Bhrigu.
+
+The short duration and gradual ascent make this trek ideal for beginners who want to experience high altitude without long trekking days.`,
+
+        highlights: [
+            'High-altitude alpine lake at 14,100 ft',
+            'Vast green meadows and open landscapes',
+            'Mythological significance of Bhrigu Rishi',
+            'Perfect weekend trek from Manali',
+            'Ideal for first-time trekkers'
+        ],
+
+        price: '₹9,500',
+        priceDetails: {
+            gst: '5% GST',
+            insurance: '₹180 Trek Insurance',
+            transport: '₹1,800 Transport (Basecamp)'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Arrival & Trek to Campsite',
+                description: 'Arrival at Manali. Drive to Gulaba and trek through meadows to the campsite.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Bhrigu Lake Summit',
+                description: 'Early morning trek to Bhrigu Lake. Spend time at the lake and descend to campsite.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Descent & Departure',
+                description: 'Trek down to Gulaba and drive back to Manali.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation during the trek',
+            'All meals while on trek (Veg)',
+            'Trek permits and local forest fees',
+            'Certified Trek Leader and support staff',
+            'First aid medical support'
+        ],
+
+        exclusions: [
+            'Meals during transit',
+            'Personal expenses',
+            'Porter or mule charges',
+            'Anything not mentioned in inclusions'
+        ],
+
+        fitnessRequirements: [
+            'Ability to trek 4–5 hours daily',
+            'Basic fitness level',
+            'Walking practice recommended'
+        ],
+
+        faqs: [
+            {
+                question: 'What is generally included?',
+                answer: 'Accommodation, meals, permits, and professional guides.'
+            },
+            {
+                question: 'How fit do I need to be?',
+                answer: 'Basic fitness is enough. You should be able to walk 4–5 hours comfortably.'
+            },
+            {
+                question: 'Is this trek suitable for beginners?',
+                answer: 'Yes, Bhrigu Lake is ideal for beginners.'
+            }
+        ],
+
+        trekType: ['Lake', 'Meadows', 'Sacred'],
+        groupType: ['Beginners', 'Weekend Trekkers'],
+        fitness: 'Low-Medium',
+        accessibility: 'Easy'
+    },
+    {
+        id: 8,
+        slug: 'dainkund-dkd',
+        name: 'Dainkund Trek (DKD)',
+        heroTitle: 'EXPERIENCE THE SINGING HILLS',
+        heroSubtitle: 'A peaceful and scenic trek near Dalhousie, offering panoramic Himalayan views, gentle trails, and serene meadows—perfect for beginners and families.',
+
+        region: 'Himachal Pradesh (Dalhousie)',
+        difficulty: 'Easy',
+        duration: '1–2 Days',
+        durationDays: 2,
+        altitude: '9,300 ft',
+        bestSeason: 'Mar – Nov',
+        seasons: ['Spring', 'Summer', 'Autumn'],
+
+        image: '/himachal/dainkund-trek-himachal.webp',
+
+        description: 'A peaceful trek near Dalhousie offering panoramic Himalayan views and gentle trails.',
+        longDescription: `The Dainkund Trek, often referred to as DKD, is a short and easy Himalayan trek located near Dalhousie. Also known as the Singing Hill, Dainkund offers stunning 360-degree views of the surrounding valleys and snow-capped peaks.
+
+The gentle terrain and short duration make it ideal for beginners, families, and travelers looking for a peaceful mountain experience.`,
+
+        highlights: [
+            '360° panoramic Himalayan views',
+            'Calm meadows and forest trails',
+            'Beginner-friendly terrain',
+            'Ideal short trek near Dalhousie',
+            'Minimal altitude challenges'
+        ],
+
+        price: '₹6,500',
+        priceDetails: {
+            gst: '5% GST',
+            insurance: '₹150 Trek Insurance',
+            transport: '₹1,200 Transport (Basecamp)'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Arrival & Trek',
+                description: 'Arrival at Dalhousie. Short drive to trekking point followed by trek to Dainkund summit.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Descent & Departure',
+                description: 'Optional sunrise view. Descend and return to Dalhousie.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation (if overnight)',
+            'Meals during trek',
+            'Trek leader and guide',
+            'Local permits'
+        ],
+
+        exclusions: [
+            'Personal expenses',
+            'Transport to base point',
+            'Anything not mentioned above'
+        ],
+
+        fitnessRequirements: [
+            'Very basic fitness sufficient',
+            'Can walk 2-3 hours comfortably',
+            'Suitable for all ages'
+        ],
+
+        faqs: [
+            {
+                question: 'What is generally included?',
+                answer: 'Meals, guides, and accommodation (if opted).'
+            },
+            {
+                question: 'How fit do I need to be?',
+                answer: 'Very basic fitness is sufficient.'
+            },
+            {
+                question: 'Is this trek suitable for beginners?',
+                answer: 'Yes, this is one of the easiest Himalayan treks.'
+            }
+        ],
+
+        trekType: ['Easy', 'Scenic', 'Short'],
+        groupType: ['Beginners', 'Families', 'Seniors'],
+        fitness: 'Low',
+        accessibility: 'Very Easy'
+    },
+    {
+        id: 9,
+        slug: 'hamta-pass',
+        name: 'Hamta Pass Trek',
+        heroTitle: 'CROSS THE HIMALAYAN PASS',
+        heroSubtitle: 'A dramatic crossover trek connecting lush Kullu Valley with the stark landscapes of Lahaul—offering changing terrains, river crossings, and stunning views.',
+
+        region: 'Himachal Pradesh',
+        difficulty: 'Easy – Moderate',
+        duration: '5–6 Days',
+        durationDays: 6,
+        altitude: '14,100 ft',
+        bestSeason: 'Jun – Sep',
+        seasons: ['Summer', 'Monsoon'],
+
+        image: '/himachal/hamta-pass-trek-himachal.webp',
+
+        description: 'A dramatic crossover trek connecting lush valleys with stark desert landscapes.',
+        longDescription: `The Hamta Pass Trek is one of the most popular crossover treks in Himachal Pradesh. Starting from the green meadows of Kullu Valley, the trail gradually leads into the cold desert of Lahaul, offering a striking contrast in landscapes.
+
+With river crossings, snow bridges, and panoramic mountain views, Hamta Pass is perfect for trekkers looking to step up from beginner to moderate treks.`,
+
+        highlights: [
+            'Dramatic landscape transition',
+            'River crossings and snow trails',
+            'Ideal progression trek for beginners',
+            'Stunning views of Lahaul valley',
+            'Option to visit Chandratal Lake'
+        ],
+
+        price: '₹11,500',
+        priceDetails: {
+            gst: '5% GST',
+            insurance: '₹200 Trek Insurance',
+            transport: '₹2,400 Transport (Basecamp)'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Arrival',
+                description: 'Arrival at Manali. Briefing and preparation.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Trek to Campsite',
+                description: 'Trek from Jobra to first campsite through forest trails.'
+            },
+            {
+                day: 'Day 3–5',
+                title: 'Trek Days',
+                description: 'Gradual ascent, river crossings, and Hamta Pass summit.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Descent & Departure',
+                description: 'Descend to Chatru and drive back to Manali.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation during the trek',
+            'All meals while on trek (Veg)',
+            'Trek permits and forest fees',
+            'Experienced Trek Leader and staff',
+            'First aid and emergency support'
+        ],
+
+        exclusions: [
+            'Meals during transit',
+            'Personal expenses',
+            'Porter/mule charges',
+            'Anything not mentioned above'
+        ],
+
+        fitnessRequirements: [
+            'Ability to trek 5–6 hours daily',
+            'Good cardio fitness',
+            'Prior trekking experience helpful'
+        ],
+
+        faqs: [
+            {
+                question: 'What is generally included?',
+                answer: 'Accommodation, meals, permits, and certified guides.'
+            },
+            {
+                question: 'How fit do I need to be?',
+                answer: 'You should be able to walk 5–6 hours daily. Cardio preparation is recommended.'
+            },
+            {
+                question: 'Is this trek suitable for beginners?',
+                answer: 'Yes, but prior trekking experience is helpful.'
+            }
+        ],
+
+        trekType: ['Pass', 'Crossover', 'Moderate'],
+        groupType: ['Intermediate', 'Adventure Seekers'],
+        fitness: 'Medium',
+        accessibility: 'Moderate'
     }
 ];
