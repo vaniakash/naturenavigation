@@ -340,7 +340,7 @@
 .ctaTitle {
     font-size: 2.75rem;
     font-weight: 900;
-    color: #f8fafc;
+    color: #0f172a;
     margin: 0 0 1.5rem 0;
     letter-spacing: -0.02em;
     line-height: 1.2;
@@ -348,7 +348,7 @@
 
 .ctaDescription {
     font-size: 1.125rem;
-    color: #cbd5e1;
+    color: #1e293b;
     line-height: 1.8;
     margin: 0 0 2rem 0;
 }
@@ -364,7 +364,7 @@
     align-items: center;
     gap: 1rem;
     font-size: 1rem;
-    color: #e2e8f0;
+    color: #334155;
 }
 
 .ctaCheck {
@@ -491,7 +491,7 @@
 .seoMainTitle {
     font-size: 2.25rem;
     font-weight: 800;
-    color: #f1f5f9;
+    color: #0f172a;
     margin: 0 0 1.5rem 0;
     letter-spacing: -0.02em;
 }
@@ -544,7 +544,7 @@
 
 .seoColumnText {
     font-size: 1rem;
-    color: #94a3b8;
+    color: #475569;
     line-height: 1.8;
     margin: 0;
 }

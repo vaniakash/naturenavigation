@@ -159,54 +159,6 @@ export default function DestinationsGrid() {
                 })}
             </div>
 
-            {/* Why Choose Section - Redesigned */}
-            <motion.section
-                className={styles.whyChooseSection}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8 }}
-            >
-                <div className={styles.sectionHeader}>
-                    <motion.h2
-                        className={styles.sectionMainTitle}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        Why Travel With Us
-                    </motion.h2>
-                    <motion.p
-                        className={styles.sectionSubtitle}
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                    >
-                        Experience the difference with our expert-led journeys
-                    </motion.p>
-                </div>
-
-                <div className={styles.featuresGrid}>
-                    {trustPoints.map((point, index) => (
-                        <motion.div
-                            key={index}
-                            className={styles.featureCard}
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                            whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                        >
-                            <div className={styles.featureIconWrapper}>
-                                <div className={styles.featureIconBg}></div>
-                                <div className={styles.featureEmoji}>{point.icon}</div>
-                            </div>
-                            <h3 className={styles.featureTitle}>{point.title}</h3>
-                            <p className={styles.featureDesc}>{point.description}</p>
-                            <div className={styles.featureAccent}></div>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.section>
-
             {/* Expert CTA Section - Redesigned */}
             <motion.section
                 className={styles.expertCTA}
@@ -270,7 +222,7 @@ export default function DestinationsGrid() {
                         </Link>
 
                         <a
-                            href="https://wa.me/919119776613"
+                            href="https://wa.me/919548177756"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.ctaSecondaryBtn}
