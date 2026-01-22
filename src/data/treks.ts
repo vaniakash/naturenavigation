@@ -1,6 +1,7 @@
 // Extended Interface for Detailed Trek Page
 export interface Trek {
     id: number;
+    slug: string; // SEO-friendly URL slug
     name: string;
 
     // Hero Section
@@ -58,6 +59,7 @@ export interface Trek {
 export const treksData: Trek[] = [
     {
         id: 1,
+        slug: 'kedarkantha',
         name: 'Kedarkantha Trek',
         heroTitle: 'EXPLORE HIMALAYAN PEAKS',
         heroSubtitle: 'A classic Himalayan summit trek offering snow trails, forest walks, and a rewarding peak climb—ideal for beginners.',
@@ -157,42 +159,234 @@ The summit offers panoramic views of major Himalayan peaks, making the climb bot
     },
     {
         id: 2,
+        slug: 'valley-of-flowers',
         name: 'Valley of Flowers Trek',
-        region: 'Uttarakhand',
-        difficulty: 'Easy–Moderate',
-        duration: '6 Days / 5 Nights',
+        heroTitle: 'EXPLORE HIMALAYAN MEADOWS',
+        heroSubtitle: 'A UNESCO World Heritage Site trek famous for its vibrant alpine flowers, scenic valleys, and serene Himalayan landscapes—perfect for nature lovers and beginners.',
+
+        region: 'Garhwal Himalaya',
+        difficulty: 'Easy – Moderate',
+        duration: '6 Days',
         durationDays: 6,
-        bestSeason: 'Monsoon (Jul–Sep)',
+        altitude: '14,100 ft',
+        bestSeason: 'Jul – Sep',
         seasons: ['Monsoon', 'Summer'],
-        altitude: '10,000–14,000 ft',
-        trekType: ['Meadows', 'Flowers'],
-        groupType: ['Beginners', 'Families'],
+
+        image: '/valley.webp',
+
+        description: 'A UNESCO World Heritage Site trek famous for its vibrant alpine flowers, scenic valleys, and serene Himalayan landscapes—perfect for nature lovers and beginners.',
+        longDescription: `The Valley of Flowers Trek is one of the most scenic and unique treks in India, located in the Chamoli district of Uttarakhand. This trek is renowned for its vast meadows that come alive during the monsoon season with hundreds of rare Himalayan flowers.
+
+Surrounded by snow-capped peaks, waterfalls, and glacial streams, the valley offers a peaceful and visually stunning trekking experience. The trek is ideal for beginners and nature enthusiasts who want to experience the beauty of the Himalayas without extreme difficulty.`,
+
+        highlights: [
+            'UNESCO World Heritage Site',
+            'Blooming alpine flowers and lush green meadows',
+            'Scenic views of waterfalls and glaciers',
+            'Ideal trek for beginners and nature lovers',
+            'Opportunity to visit Hemkund Sahib (optional)'
+        ],
+
+        price: '₹9,950',
+        priceDetails: {
+            gst: '5% GST',
+            insurance: '₹180 Trek Insurance',
+            transport: '₹2,200 Transport (Basecamp)'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Arrival',
+                description: 'Arrival at Govindghat / Joshimath. Briefing and trek preparation.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Trek to Ghangaria',
+                description: 'Trek from Govindghat to Ghangaria via Pulna village, passing through river valleys and forest trails.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Valley of Flowers Exploration',
+                description: 'Trek to Valley of Flowers and explore the meadows. Return to Ghangaria.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Optional Hemkund Sahib',
+                description: 'Visit Hemkund Sahib early morning (optional). Return to Ghangaria.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Trek Back',
+                description: 'Descend from Ghangaria to Govindghat. Drive to Joshimath.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Departure',
+                description: 'Departure to Dehradun / Rishikesh.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation during the trek',
+            'All meals while on trek (Veg)',
+            'Trek permits and forest entry fees',
+            'Certified Trek Leader, Guide, and Support Staff',
+            'First aid medical kits and emergency support'
+        ],
+
+        exclusions: [
+            'Meals during transit',
+            'Any personal expenses',
+            'Porters or mules for personal luggage',
+            'Anything not mentioned in inclusions'
+        ],
+
+        fitnessRequirements: [
+            'Ability to trek 5–6 hours daily',
+            'Light cardio fitness recommended',
+            '3–4 weeks of walking practice is beneficial'
+        ],
+
+        faqs: [
+            {
+                question: 'What is generally included?',
+                answer: 'Accommodation, meals during the trek, permits, and experienced guides are included.'
+            },
+            {
+                question: 'How fit do I need to be?',
+                answer: 'You should be able to walk 5–6 hours daily. Light cardio and walking practice for 3–4 weeks is recommended.'
+            },
+            {
+                question: 'Is this trek suitable for beginners?',
+                answer: 'Yes, Valley of Flowers is beginner-friendly with gradual ascents and well-marked trails.'
+            }
+        ],
+
+        trekType: ['Meadows', 'Flowers', 'UNESCO Site'],
+        groupType: ['Beginners', 'Families', 'Nature Lovers'],
         fitness: 'Medium',
-        accessibility: 'Moderate',
-        price: '₹9,500',
-        image: '/kedarkantha.webp', // Using placeholder for now as requested previously
-        description: 'A fairyland in the high Himalayas of Uttarakhand, offering a breathtaking display of blooming flowers.'
+        accessibility: 'Moderate'
     },
     {
         id: 3,
+        slug: 'har-ki-dun',
         name: 'Har Ki Dun Trek',
-        region: 'Uttarakhand',
+        heroTitle: 'EXPLORE THE VALLEY OF GODS',
+        heroSubtitle: 'An ancient trail through pristine Himalayan valleys, offering rich culture, stunning landscapes, and a glimpse of traditional mountain life.',
+
+        region: 'Garhwal Himalaya',
         difficulty: 'Moderate',
-        duration: '7 Days / 6 Nights',
+        duration: '7 Days',
         durationDays: 7,
-        bestSeason: 'Summer (Apr–Jun) & Autumn (Sep–Nov)',
-        seasons: ['Summer', 'Autumn'],
         altitude: '11,800 ft',
-        trekType: ['Valley', 'Cultural'],
-        groupType: ['History Buffs', 'Nature Lovers'],
-        fitness: 'Medium',
-        accessibility: 'Remote',
+        bestSeason: 'Apr – Jun, Sep – Nov',
+        seasons: ['Summer', 'Autumn'],
+
+        image: '/harkidun.webp',
+
+        description: 'An ancient trail through pristine Himalayan valleys, known for its rich culture and stunning landscapes.',
+        longDescription: `Har Ki Dun is a cradle-shaped hanging valley in the Garhwal Himalayas, often called the "Valley of Gods." This trek takes you through ancient villages, dense pine forests, and alongside gushing rivers.
+
+The valley is steeped in mythology and offers stunning views of Swargarohini peaks. It's an ideal trek for those who want to experience both natural beauty and cultural richness of the Himalayas.`,
+
+        highlights: [
+            'Cradle-shaped hanging valley',
+            'Ancient villages with rich Himalayan culture',
+            'Views of Swarg Rohini peaks',
+            'Dense pine and deodar forests',
+            'Ideal for photography and nature lovers'
+        ],
+
         price: '₹12,500',
-        image: '/kedarkantha.webp',
-        description: 'A cradle shaped hanging valley in the Garhwal Himalayas, known for its rich culture and ancient villages.'
+        priceDetails: {
+            gst: '5% GST',
+            insurance: '₹200 Trek Insurance',
+            transport: '₹2,500 Transport (Basecamp)'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Arrival at Sankri',
+                description: 'Arrive at Sankri village. Acclimatization and briefing.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Sankri to Taluka',
+                description: 'Trek through villages and forests to reach Taluka campsite.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Taluka to Osla',
+                description: 'Trek to Osla, passing through beautiful meadows and riverside trails.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Osla to Har Ki Dun',
+                description: 'Trek to Har Ki Dun valley, explore the meadows and surrounding peaks.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Exploration Day',
+                description: 'Optional exploration or rest day at Har Ki Dun.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Return Journey',
+                description: 'Begin descent back to Sankri via Taluka.'
+            },
+            {
+                day: 'Day 7',
+                title: 'Departure',
+                description: 'Departure from Sankri to Dehradun.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation during the trek',
+            'All meals while on trek (Veg)',
+            'Trek permits and camping fees',
+            'Experienced Trek Leader and Support Staff',
+            'First aid and emergency support'
+        ],
+
+        exclusions: [
+            'Meals during transit',
+            'Personal expenses',
+            'Porter charges for personal luggage',
+            'Anything not mentioned in inclusions'
+        ],
+
+        fitnessRequirements: [
+            'Ability to trek 6-7 hours daily',
+            'Medium to good fitness level',
+            'Prior trekking experience helpful but not mandatory'
+        ],
+
+        faqs: [
+            {
+                question: 'Is this trek suitable for beginners?',
+                answer: 'Yes, with moderate fitness and preparation, beginners can complete this trek.'
+            },
+            {
+                question: 'What is the best time to visit?',
+                answer: 'April to June and September to November offer the best weather and views.'
+            },
+            {
+                question: 'Are there villages on the route?',
+                answer: 'Yes, you will pass through several ancient Himalayan villages with unique culture.'
+            }
+        ],
+
+        trekType: ['Valley', 'Cultural', 'Moderate'],
+        groupType: ['History Buffs', 'Nature Lovers', 'Photographers'],
+        fitness: 'Medium',
+        accessibility: 'Remote'
     },
     {
         id: 4,
+        slug: 'rupin-pass',
         name: 'Rupin Pass Trek',
         region: 'Uttarakhand/Himachal',
         difficulty: 'Moderate-Difficult',
@@ -211,6 +405,7 @@ The summit offers panoramic views of major Himalayan peaks, making the climb bot
     },
     {
         id: 5,
+        slug: 'brahmatal',
         name: 'Brahmatal Trek',
         region: 'Uttarakhand',
         difficulty: 'Moderate',
@@ -229,6 +424,7 @@ The summit offers panoramic views of major Himalayan peaks, making the climb bot
     },
     {
         id: 6,
+        slug: 'dayara-bugyal',
         name: 'Dayara Bugyal Trek',
         region: 'Uttarakhand',
         difficulty: 'Easy',

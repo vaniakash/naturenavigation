@@ -43,8 +43,12 @@ export default function TreksPage() {
                 return false;
             }
 
-            // Category filters
-            const regionMatch = selectedFilters.region.length === 0 || selectedFilters.region.includes(trek.region);
+            // Region matching - check if trek region contains filter value or vice versa
+            const regionMatch = selectedFilters.region.length === 0 ||
+                selectedFilters.region.some(r =>
+                    trek.region.toLowerCase().includes(r.toLowerCase()) ||
+                    r.toLowerCase().includes(trek.region.toLowerCase())
+                );
 
             // Difficulty matching (approximate string match)
             const difficultyMatch = selectedFilters.difficulty.length === 0 ||

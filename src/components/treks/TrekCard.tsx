@@ -25,7 +25,7 @@ export default function TrekCard({ trek, index = 0 }: TrekCardProps) {
             whileHover={{ y: -8 }}
             className={styles.card}
         >
-            <Link href={`/treks/${trek.id}`} className={styles.cardLink}>
+            <Link href={`/treks/${trek.slug}`} className={styles.cardLink}>
                 <motion.div
                     className={styles.imageContainer}
                     whileHover={{ scale: 1.05 }}

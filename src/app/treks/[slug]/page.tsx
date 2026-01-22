@@ -6,13 +6,13 @@ import { Mountain, MapPin, Clock, Calendar, TrendingUp, Check, ChevronDown } fro
 // Force static generation for known paths (optional but good for performance)
 export async function generateStaticParams() {
     return treksData.map((trek) => ({
-        id: trek.id.toString(),
+        slug: trek.slug,
     }));
 }
 
-export default async function TrekDetailPage(props: { params: Promise<{ id: string }> }) {
+export default async function TrekDetailPage(props: { params: Promise<{ slug: string }> }) {
     const params = await props.params;
-    const trek = treksData.find((t) => t.id === parseInt(params.id));
+    const trek = treksData.find((t) => t.slug === params.slug);
 
     if (!trek) {
         notFound();
