@@ -159,62 +159,173 @@ export default function DestinationsGrid() {
                 })}
             </div>
 
-            {/* Why Choose Section */}
-            <motion.div
-                className={styles.trustSection}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+            {/* Why Choose Section - Redesigned */}
+            <motion.section
+                className={styles.whyChooseSection}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
             >
-                <h2 className={styles.trustTitle}>Why Choose These Destinations</h2>
-                <div className={styles.trustGrid}>
+                <div className={styles.sectionHeader}>
+                    <motion.h2
+                        className={styles.sectionMainTitle}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        Why Travel With Us
+                    </motion.h2>
+                    <motion.p
+                        className={styles.sectionSubtitle}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                    >
+                        Experience the difference with our expert-led journeys
+                    </motion.p>
+                </div>
+
+                <div className={styles.featuresGrid}>
                     {trustPoints.map((point, index) => (
                         <motion.div
                             key={index}
-                            className={styles.trustCard}
-                            initial={{ opacity: 0, y: 20 }}
+                            className={styles.featureCard}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.4 + index * 0.1 }}
+                            transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                            whileHover={{ y: -8, transition: { duration: 0.3 } }}
                         >
-                            <div className={styles.trustIcon}>{point.icon}</div>
-                            <h4 className={styles.trustCardTitle}>{point.title}</h4>
-                            <p className={styles.trustCardDesc}>{point.description}</p>
+                            <div className={styles.featureIconWrapper}>
+                                <div className={styles.featureIconBg}></div>
+                                <div className={styles.featureEmoji}>{point.icon}</div>
+                            </div>
+                            <h3 className={styles.featureTitle}>{point.title}</h3>
+                            <p className={styles.featureDesc}>{point.description}</p>
+                            <div className={styles.featureAccent}></div>
                         </motion.div>
                     ))}
                 </div>
-            </motion.div>
+            </motion.section>
 
-            {/* Help / CTA Section */}
-            <motion.div
-                className={styles.helpSection}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+            {/* Expert CTA Section - Redesigned */}
+            <motion.section
+                className={styles.expertCTA}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
             >
-                <h3 className={styles.helpTitle}>Not sure which destination is right for you?</h3>
-                <p className={styles.helpText}>Our travel experts are here to help you plan your perfect journey</p>
-                <div className={styles.helpButtons}>
-                    <Link href="/contact" className={styles.primaryBtn}>
-                        <MessageCircle size={20} />
-                        <span>Talk to an Expert</span>
-                    </Link>
-                    <a href="https://wa.me/919119776613" target="_blank" rel="noopener noreferrer" className={styles.secondaryBtn}>
-                        <Phone size={20} />
-                        <span>WhatsApp Us</span>
-                    </a>
-                </div>
-            </motion.div>
+                <div className={styles.ctaBg}></div>
+                <div className={styles.ctaContent}>
+                    <div className={styles.ctaTextBlock}>
+                        <motion.h2
+                            className={styles.ctaTitle}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
+                            Need Help Choosing?
+                        </motion.h2>
+                        <motion.p
+                            className={styles.ctaDescription}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                        >
+                            Our destination experts are here to craft your perfect Himalayan adventure. Get personalized recommendations based on your preferences, fitness level, and travel goals.
+                        </motion.p>
+                        <motion.div
+                            className={styles.ctaFeatures}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
+                            <div className={styles.ctaFeature}>
+                                <div className={styles.ctaCheck}>✓</div>
+                                <span>Free consultation</span>
+                            </div>
+                            <div className={styles.ctaFeature}>
+                                <div className={styles.ctaCheck}>✓</div>
+                                <span>Instant response</span>
+                            </div>
+                            <div className={styles.ctaFeature}>
+                                <div className={styles.ctaCheck}>✓</div>
+                                <span>Custom itineraries</span>
+                            </div>
+                        </motion.div>
+                    </div>
 
-            {/* SEO Content Block */}
-            <div className={styles.seoContent}>
-                <h2 className={styles.seoTitle}>Explore Trekking & Spiritual Destinations in the Himalayas</h2>
-                <p className={styles.seoText}>
-                    Discover the majestic beauty of trekking destinations in Uttarakhand and Himachal Pradesh. From the sacred Char Dham Yatra circuit to adventurous trails in Garhwal and Kumaon Himalayas, we offer expertly guided experiences for pilgrims and adventure seekers alike. Our destinations span spiritual circuits, nature trails, and cultural expeditions across the Indian Himalayas.
-                </p>
-                <p className={styles.seoText}>
-                    Whether you're seeking spiritual enlightenment at ancient temples, challenging mountain treks, or peaceful nature retreats, our carefully curated destinations offer something for every traveler. Experience the pristine valleys, snow-capped peaks, and rich cultural heritage of the Himalayan region with local guides who know every trail intimately.
-                </p>
-            </div>
+                    <motion.div
+                        className={styles.ctaActions}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                    >
+                        <Link href="/contact" className={styles.ctaPrimaryBtn}>
+                            <MessageCircle className={styles.btnIcon} />
+                            <span className={styles.btnText}>
+                                <span className={styles.btnLabel}>Talk to Expert</span>
+                                <span className={styles.btnSubtext}>Get personalized advice</span>
+                            </span>
+                            <ArrowRight className={styles.btnArrow} />
+                        </Link>
+
+                        <a
+                            href="https://wa.me/919119776613"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.ctaSecondaryBtn}
+                        >
+                            <Phone className={styles.btnIcon} />
+                            <span className={styles.btnText}>
+                                <span className={styles.btnLabel}>WhatsApp</span>
+                                <span className={styles.btnSubtext}>Quick response</span>
+                            </span>
+                        </a>
+                    </motion.div>
+                </div>
+            </motion.section>
+
+            {/* SEO Content Block - Redesigned */}
+            <motion.section
+                className={styles.seoSection}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+            >
+                <div className={styles.seoContainer}>
+                    <div className={styles.seoHeader}>
+                        <h2 className={styles.seoMainTitle}>
+                            Discover Himalayan Destinations
+                        </h2>
+                        <div className={styles.seoDivider}></div>
+                    </div>
+
+                    <div className={styles.seoGrid}>
+                        <div className={styles.seoColumn}>
+                            <h3 className={styles.seoColumnTitle}>Trekking Destinations</h3>
+                            <p className={styles.seoColumnText}>
+                                Explore breathtaking trekking destinations across Uttarakhand and Himachal Pradesh. From the sacred Char Dham Yatra circuit to challenging trails in the Garhwal and Kumaon Himalayas, discover expertly guided experiences designed for both pilgrims and adventure seekers.
+                            </p>
+                        </div>
+
+                        <div className={styles.seoColumn}>
+                            <h3 className={styles.seoColumnTitle}>Spiritual Journeys</h3>
+                            <p className={styles.seoColumnText}>
+                                Whether you seek spiritual enlightenment at ancient temples, challenging mountain expeditions, or peaceful nature retreats, our curated destinations offer transformative experiences. Traverse pristine valleys, witness snow-capped peaks, and immerse yourself in the rich cultural heritage of the Himalayas with local guides who know every trail intimately.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className={styles.seoKeywords}>
+                        <span className={styles.seoTag}>Uttarakhand Treks</span>
+                        <span className={styles.seoTag}>Himachal Pradesh</span>
+                        <span className={styles.seoTag}>Char Dham Yatra</span>
+                        <span className={styles.seoTag}>Garhwal Himalayas</span>
+                        <span className={styles.seoTag}>Spiritual Tourism</span>
+                        <span className={styles.seoTag}>Adventure Travel</span>
+                    </div>
+                </div>
+            </motion.section>
         </div>
     );
 }
