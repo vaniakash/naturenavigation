@@ -1,23 +1,33 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight, Clock, ArrowRight } from 'lucide-react';
 import styles from './PopularTreks.module.css';
 
-const TrekCard = ({ trek }: { trek: any }) => {
+const TrekCard = ({ trek, isActive }: { trek: any; isActive: boolean }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
+        if (!isActive) return;
+
         const interval = setInterval(() => {
             setCurrentImageIndex((prev) => (prev + 1) % trek.images.length);
-        }, 6000); // Change image every 6 seconds
+        }, 6000);
 
         return () => clearInterval(interval);
-    }, [trek.images.length]);
+    }, [trek.images.length, isActive]);
 
     return (
-        <div className={styles.card}>
+        <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className={styles.imageWrapper}>
                 {trek.images.map((img: string, index: number) => (
                     <Image
@@ -29,6 +39,8 @@ const TrekCard = ({ trek }: { trek: any }) => {
                         priority={index === 0}
                     />
                 ))}
+
+                <div className={styles.imageOverlay} />
 
                 {/* Carousel Indicators */}
                 <div className={styles.indicators}>
@@ -51,25 +63,25 @@ const TrekCard = ({ trek }: { trek: any }) => {
 
                 <div className={styles.details}>
                     <span className={styles.detailItem}>
-                        <svg className={styles.icon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                        <Clock className={styles.icon} size={18} />
                         {trek.duration}
                     </span>
                 </div>
 
-                <Link href="/destinations" className={styles.cardBtn}>
-                    View Details
-                    <svg className={styles.btnIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                <Link href={trek.slug} className={styles.cardBtn}>
+                    <span>View Details</span>
+                    <ArrowRight className={styles.btnIcon} size={20} />
                 </Link>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
 export default function PopularTreks() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(0);
+    const constraintsRef = useRef(null);
+
     const featuredTreks = [
         {
             name: 'Har Ki Dun Trek',
@@ -97,30 +109,150 @@ export default function PopularTreks() {
         },
     ];
 
+    const handlePrevious = () => {
+        setDirection(-1);
+        setCurrentIndex((prev) => (prev === 0 ? featuredTreks.length - 1 : prev - 1));
+    };
+
+    const handleNext = () => {
+        setDirection(1);
+        setCurrentIndex((prev) => (prev === featuredTreks.length - 1 ? 0 : prev + 1));
+    };
+
+    const slideVariants = {
+        enter: (direction: number) => ({
+            x: direction > 0 ? 1000 : -1000,
+            opacity: 0,
+        }),
+        center: {
+            x: 0,
+            opacity: 1,
+        },
+        exit: (direction: number) => ({
+            x: direction > 0 ? -1000 : 1000,
+            opacity: 0,
+        }),
+    };
+
     return (
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2 className={styles.title}>
+                    <motion.h2
+                        className={styles.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
                         Popular <span className={styles.highlight}>Treks</span>
-                    </h2>
-                    <p className={styles.subtitle}>
+                    </motion.h2>
+                    <motion.p
+                        className={styles.subtitle}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                    >
                         Discover our most popular trekking routes in the Uttarakhand Himalayas
-                    </p>
+                    </motion.p>
                 </div>
 
-                <div className={styles.grid}>
-                    {featuredTreks.map((trek) => (
-                        <TrekCard key={trek.name} trek={trek} />
+                {/* Desktop Grid View */}
+                <div className={styles.desktopGrid}>
+                    {featuredTreks.map((trek, index) => (
+                        <motion.div
+                            key={trek.name}
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                        >
+                            <TrekCard trek={trek} isActive={true} />
+                        </motion.div>
                     ))}
                 </div>
 
-                <div className={styles.footer}>
-                    <Link href="/treks" className={styles.viewAllBtn}>
-                        View All Treks
-                    </Link>
+                {/* Mobile Carousel View */}
+                <div className={styles.mobileCarousel} ref={constraintsRef}>
+                    <motion.button
+                        className={`${styles.navBtn} ${styles.navBtnLeft}`}
+                        onClick={handlePrevious}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        <ChevronLeft size={24} />
+                    </motion.button>
+
+                    <div className={styles.carouselWrapper}>
+                        <AnimatePresence initial={false} custom={direction} mode="wait">
+                            <motion.div
+                                key={currentIndex}
+                                custom={direction}
+                                variants={slideVariants}
+                                initial="enter"
+                                animate="center"
+                                exit="exit"
+                                transition={{
+                                    x: { type: 'spring', stiffness: 300, damping: 30 },
+                                    opacity: { duration: 0.2 },
+                                }}
+                                drag="x"
+                                dragConstraints={{ left: 0, right: 0 }}
+                                dragElastic={1}
+                                onDragEnd={(e, { offset, velocity }) => {
+                                    const swipe = swipePower(offset.x, velocity.x);
+                                    if (swipe < -swipeConfidenceThreshold) {
+                                        handleNext();
+                                    } else if (swipe > swipeConfidenceThreshold) {
+                                        handlePrevious();
+                                    }
+                                }}
+                                className={styles.carouselSlide}
+                            >
+                                <TrekCard trek={featuredTreks[currentIndex]} isActive={true} />
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
+
+                    <motion.button
+                        className={`${styles.navBtn} ${styles.navBtnRight}`}
+                        onClick={handleNext}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        <ChevronRight size={24} />
+                    </motion.button>
+
+                    {/* Dots Indicator */}
+                    <div className={styles.dotsContainer}>
+                        {featuredTreks.map((_, index) => (
+                            <button
+                                key={index}
+                                className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ''}`}
+                                onClick={() => {
+                                    setDirection(index > currentIndex ? 1 : -1);
+                                    setCurrentIndex(index);
+                                }}
+                            />
+                        ))}
+                    </div>
                 </div>
+
+                <motion.div
+                    className={styles.footer}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                    <Link href="/treks" className={styles.viewAllBtn}>
+                        <span>View All Treks</span>
+                        <ArrowRight size={20} />
+                    </Link>
+                </motion.div>
             </div>
         </section>
     );
 }
+
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
+    return Math.abs(offset) * velocity;
+};
