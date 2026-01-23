@@ -6,7 +6,7 @@ import { sendBookingApprovalToUser, sendBookingRejectionToUser } from '@/lib/ema
 
 export async function PATCH(
     req: Request,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
         const session = await auth();
@@ -18,7 +18,7 @@ export async function PATCH(
             );
         }
 
-        const { id } = params;
+        const { id } = await params;
         const body = await req.json();
         const { status, adminNotes } = body;
 
