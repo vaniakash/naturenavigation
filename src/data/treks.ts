@@ -388,58 +388,390 @@ The valley is steeped in mythology and offers stunning views of Swargarohini pea
         id: 4,
         slug: 'rupin-pass',
         name: 'Rupin Pass Trek',
-        region: 'Uttarakhand/Himachal',
-        difficulty: 'Moderate-Difficult',
+        heroTitle: 'Rupin Pass Trek',
+        heroSubtitle: 'The Waterfall Trail - Himachal\'s Most Scenic Pass',
+        image: '/RupinPassTrek/rupinpass.webp',
+
+        region: 'Himachal Pradesh',
+        difficulty: 'Moderate to Difficult',
         duration: '8 Days',
         durationDays: 8,
-        bestSeason: 'May-Jun, Sep-Oct',
-        seasons: ['Summer', 'Autumn'],
         altitude: '15,250 ft',
-        trekType: ['High Altitude Pass'],
-        groupType: ['Experienced'],
+        bestSeason: 'May – Jun, Sep – Oct',
+        seasons: ['Summer', 'Autumn'],
+
+        description: 'An incredibly scenic trek featuring waterfalls, hanging villages, meadows, snow bridges, and a thrilling high-altitude pass crossing.',
+
+        longDescription: `The Rupin Pass Trek is often hailed as one of the most beautiful treks in the Indian Himalayas. This cross-over trek from Uttarakhand to Himachal Pradesh offers an incredibly diverse landscape, changing dramatically with each passing day - from dense forests to cascading waterfalls, from hanging villages to vast meadows, from snow bridges to steep glacier climbs.
+
+The trek follows the Rupin River valley, featuring the spectacular Rupin Waterfall - one of the highest waterfalls in the Himalayas. You'll walk through ancient villages like Jhaka, where houses seem to defy gravity by hanging on steep slopes. The trail takes you across snow bridges, through rhododendron forests, and over alpine meadows before the final challenging climb to Rupin Pass (4,650m).
+
+The pass crossing itself is an adventure - a steep snow and scree ascent that rewards trekkers with breathtaking 360-degree views of Kinnaur peaks including Kailash range. The descent into the Sangla valley is equally dramatic, making this one of the most complete Himalayan trekking experiences.
+
+Rupin Pass is recommended for trekkers with prior experience, good fitness, and a spirit of adventure. The trek combines technical challenges with stunning beauty, making it a favorite among serious trekking enthusiasts.`,
+
+        highlights: [
+            'Cross from Uttarakhand to Himachal Pradesh',
+            'Witness the magnificent Rupin Waterfall',
+            'Visit hanging villages of Jhaka and Saruwas Thatch',
+            'Walk on snow bridges over the Rupin River',
+            'Challenging climb to Rupin Pass (15,250 ft)',
+            '360° views of Kinnaur Kailash range',
+            'Diverse terrain - forests, meadows, glaciers, waterfalls',
+            'Descend into the beautiful Sangla Valley'
+        ],
+
+        price: '₹16,950',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Recommended but not included',
+            transport: 'Available from Dehradun'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Dehradun to Dhaula',
+                description: 'Drive from Dehradun to Dhaula village (8-9 hours). Cross through Mussoorie, Nainbagh, and Nowgaon. Overnight in guesthouse/tents. Altitude: 5,340 ft.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Dhaula to Sewa',
+                description: 'Begin trek through villages and forests alongside Rupin River. First views of snow peaks. Reach Sewa campsite (7,200 ft). Trek duration: 5-6 hours.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Sewa to Jhaka via Rupin Waterfall',
+                description: 'Trek past the spectacular Rupin Waterfall. Cross snow bridges and reach the hanging village of Jhaka (9,450 ft). Trek duration: 6-7 hours.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Jhaka to Saruwas Thatch',
+                description: 'Steep climb through meadows and forests. Reach the beautiful campsite of Saruwas Thatch (12,100 ft). Trek duration: 6-7 hours.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Saruwas Thatch to Dhanderas Thatch',
+                description: 'Trek through vast alpine meadows with stunning mountain views. Reach Dhanderas Thatch (13,100 ft), the base camp for pass crossing. Trek duration: 4-5 hours.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Dhanderas Thatch to Rupin Pass to Ronti Gad',
+                description: 'Summit day! Very early start for steep climb to Rupin Pass (15,250 ft). Challenging snow and scree ascent. After crossing, steep descent to Ronti Gad campsite (11,150 ft). Trek duration: 10-12 hours.'
+            },
+            {
+                day: 'Day 7',
+                title: 'Ronti Gad to Sangla',
+                description: 'Descend through meadows and forests to reach Sangla village. Drive to Sangla town. Trek duration: 3-4 hours.'
+            },
+            {
+                day: 'Day 8',
+                title: 'Sangla to Dehradun',
+                description: 'Drive back to Dehradun via Shimla. Long but scenic journey. Arrive by evening.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation in guesthouses and tents',
+            'All meals from Day 1 dinner to Day 8 breakfast',
+            'Trek permits and forest fees',
+            'Experienced trek leader and technical guides',
+            'High-altitude camping equipment',
+            'First aid, oxygen cylinder, and safety gear',
+            'Porter support for common equipment',
+            'Micro-spikes and technical gear for pass crossing'
+        ],
+
+        exclusions: [
+            'Transport from Dehradun',
+            'Personal trekking gear and equipment',
+            'Personal porter/offloading charges',
+            'Trekking insurance',
+            'Meals during transit days',
+            'Emergency evacuation costs',
+            'Any personal expenses'
+        ],
+
+        fitnessRequirements: [
+            'Very good physical fitness required',
+            'Ability to trek 8-10 hours on challenging terrain',
+            'Prior high-altitude trekking experience recommended',
+            'Good stamina for steep ascents and snow walking',
+            'Should have completed at least 2 moderate treks'
+        ],
+
+        faqs: [
+            {
+                question: 'Is Rupin Pass suitable for beginners?',
+                answer: 'No. Rupin Pass requires good fitness and prior trekking experience. The pass crossing day is particularly challenging with steep snow slopes.'
+            },
+            {
+                question: 'What makes Rupin Pass special?',
+                answer: 'Rupin Pass offers incredible diversity - you experience waterfalls, hanging villages, snow bridges, meadows, and a challenging high pass, all in one trek. It\'s a complete Himalayan experience.'
+            },
+            {
+                question: 'Do I need technical equipment?',
+                answer: 'Yes, micro-spikes are essential for the pass crossing. These are usually provided by trek operators. Trekking poles are highly recommended.'
+            },
+            {
+                question: 'When is the best time?',
+                answer: 'May-June offers snow-covered pass crossing and full waterfalls. September-October has clearer weather but less snow. Both seasons are excellent.'
+            }
+        ],
+
+        trekType: ['Pass', 'Waterfall', 'Cross-over', 'Technical'],
+        groupType: ['Experienced Trekkers', 'Adventure Seekers', 'Photographers'],
         fitness: 'High',
-        accessibility: 'Moderate',
-        price: '₹15,450',
-        image: '/kedarkantha.webp',
-        description: 'A high altitude crossover trek full of surprises, waterfalls, and changing scenery.'
+        accessibility: 'Moderate to Difficult'
     },
     {
         id: 5,
         slug: 'brahmatal',
         name: 'Brahmatal Trek',
-        region: 'Uttarakhand',
-        difficulty: 'Moderate',
+        heroTitle: 'Brahmatal Trek',
+        heroSubtitle: 'Winter\'s Hidden Gem - Lake of Brahma',
+        image: '/brahmatal.webp',
+
+        region: 'Garhwal Himalaya (Uttarakhand)',
+        difficulty: 'Easy to Moderate',
         duration: '6 Days',
         durationDays: 6,
-        bestSeason: 'Dec-Mar',
-        seasons: ['Winter'],
         altitude: '12,250 ft',
-        trekType: ['Winter', 'Lake'],
-        groupType: ['Beginners', 'Solo'],
+        bestSeason: 'Dec – Mar',
+        seasons: ['Winter'],
+
+        description: 'A stunning winter trek to a high-altitude glacial lake, offering spectacular mountain views and pristine snow-covered landscapes.',
+
+        longDescription: `Brahmatal Trek is one of the most beautiful winter treks in Uttarakhand, taking you to the serene Brahmatal Lake at an altitude of 12,250 feet. Legend has it that Lord Brahma meditated at this lake, hence the name. This trek offers an incredible winter wonderland experience with oak and rhododendron forests completely covered in snow.
+
+What sets Brahmatal apart from other winter treks is the 360-degree mountain panorama it offers. Throughout the trek, you're treated to stunning views of Mt. Trishul (7,120m) and Mt. Nanda Ghunti (6,309m) - two of the most beautiful peaks in the Kumaon region. The views become even more spectacular as you climb higher.
+
+The trek passes through beautiful campsites like Bekaltal (another pristine lake) and Brahmatal, each offering unique charm. The ridge walk before Brahmatal summit is particularly breathtaking, with unobstructed views of the Himalayan peaks. The summit climb rewards trekkers with a magnificent 360-degree panorama.
+
+Brahmatal is perfect for both beginners looking for their first winter trek and experienced trekkers seeking beautiful snow trekking. The well-defined trail, moderate altitude, and gradual ascent make it accessible while still offering a true Himalayan winter experience.`,
+
+        highlights: [
+            'Trek to the sacred Brahmatal Lake (12,250 ft)',
+            '360° views of Mt. Trishul and Nanda Ghunti',
+            'Beautiful winter wonderland with snow-covered forests',
+            'Visit Bekaltal - another pristine high-altitude lake',
+            'Spectacular ridge walk with mountain panoramas',
+            'Perfect beginner-friendly winter trek',
+            'Views of Chaukhamba, Nilkantha, and other peaks',
+            'Walk through oak and rhododendron forests'
+        ],
+
+        price: '₹8,950',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Not included',
+            transport: 'Available from Kathgodam/Rishikesh'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Kathgodam to Lohajung',
+                description: 'Drive from Kathgodam to Lohajung base camp (7-8 hours). Scenic journey through Kumaon valleys. Overnight in guesthouse. Altitude: 7,700 ft.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Lohajung to Bekaltal',
+                description: 'Begin trek through oak forests. Gradual ascent with increasing snow cover. Reach Bekaltal lake campsite (9,600 ft). Trek duration: 5-6 hours.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Bekaltal to Brahmatal via Telandi',
+                description: 'Trek through dense forests and open meadows. Pass Telandi ridge with first spectacular views of Trishul. Reach Brahmatal campsite (10,400 ft). Trek duration: 6-7 hours.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Brahmatal to Summit and back to Brahmatal',
+                description: 'Early morning summit climb to Brahmatal peak (12,250 ft). Spectacular 360° views of Himalayan giants. Visit Brahmatal Lake. Return to camp. Trek duration: 5-6 hours.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Brahmatal to Lohajung',
+                description: 'Descend back to Lohajung base camp via Bekaltal or alternative route. Trek duration: 6-7 hours. Overnight in guesthouse.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Lohajung to Kathgodam',
+                description: 'Drive back to Kathgodam. Journey ends with beautiful winter trek memories.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation in guesthouses and tents',
+            'All meals from Day 1 dinner to Day 6 breakfast',
+            'Trek permits and forest fees',
+            'Experienced trek leader and guides',
+            'Winter camping equipment and sleeping bags',
+            'Micro-spikes for snow walking',
+            'First aid kit and safety equipment'
+        ],
+
+        exclusions: [
+            'Transport from Kathgodam',
+            'Personal trekking gear',
+            'Personal porter/offloading charges',
+            'Insurance',
+            'Meals during transit',
+            'Any personal expenses'
+        ],
+
+        fitnessRequirements: [
+            'Moderate fitness level required',
+            'Ability to trek 5-6 hours in snow',
+            'Suitable for beginners with good fitness',
+            'First winter trek can be attempted here'
+        ],
+
+        faqs: [
+            {
+                question: 'Is Brahmatal good for a first winter trek?',
+                answer: 'Absolutely! Brahmatal is one of the best winter treks for beginners. The moderate altitude, gradual ascent, and well-defined trail make it perfect for your first snow trekking experience.'
+            },
+            {
+                question: 'What are the views like?',
+                answer: 'Spectacular! You get 360-degree views of Mt. Trishul, Nanda Ghunti, Chaukhamba, Nilkantha, and many other peaks. The views from the summit are particularly breathtaking.'
+            },
+            {
+                question: 'How cold does it get?',
+                answer: 'Temperatures can drop to -10°C to -15°C at night during peak winter (Dec-Jan). Proper winter gear including a -10°C rated sleeping bag is essential.'
+            },
+            {
+                question: 'Is the trail safe in winter?',
+                answer: 'Yes, the trail is well-established and safe. With micro-spikes and proper guidance, even beginners can complete this trek safely. Follow your guide\'s instructions carefully.'
+            }
+        ],
+
+        trekType: ['Lake', 'Summit', 'Winter', 'Scenic'],
+        groupType: ['Beginners', 'Winter Trekkers', 'Photographers'],
         fitness: 'Medium',
-        accessibility: 'Easy',
-        price: '₹10,450',
-        image: '/kedarkantha.webp',
-        description: 'A winter wonderland with grand views of Mt. Trishul and Nanda Ghunti.'
+        accessibility: 'Easy to Moderate'
     },
     {
         id: 6,
         slug: 'dayara-bugyal',
         name: 'Dayara Bugyal Trek',
-        region: 'Uttarakhand',
+        heroTitle: 'Dayara Bugyal Trek',
+        heroSubtitle: 'The Velvet Meadows of Uttarakhand',
+        image: '/dayara-bugyal.webp',
+
+        region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Easy',
-        duration: '4 Days',
-        durationDays: 4,
-        bestSeason: 'All Year',
-        seasons: ['Winter', 'Summer', 'Spring', 'Autumn'],
-        altitude: '11,181 ft',
-        trekType: ['Meadows'],
-        groupType: ['Families', 'Beginners'],
-        fitness: 'Low-Medium',
-        accessibility: 'Easy',
-        price: '₹8,500',
-        image: '/kedarkantha.webp',
-        description: 'One of the most beautiful high altitude meadows in India.'
+        duration: '5 Days',
+        durationDays: 5,
+        altitude: '12,000 ft',
+        bestSeason: 'Apr – Jun, Sep – Nov',
+        seasons: ['Summer', 'Autumn', 'Winter'],
+
+        description: 'Trek to one of India\'s most beautiful high-altitude meadows, offering stunning mountain views and a carpet of alpine flowers.',
+
+        longDescription: `Dayara Bugyal is one of the most beautiful and accessible high-altitude meadow treks in the Indian Himalayas. "Bugyal" means high-altitude meadow, and Dayara Bugyal is often called the "velvet meadows" due to its incredibly soft, lush grass that feels like walking on a green carpet.
+
+The trek offers a perfect introduction to high-altitude trekking without being too challenging. The trail gradually ascends through dense oak and pine forests before opening up to vast, rolling meadows that stretch as far as the eye can see. During summer (May-June), these meadows burst into a riot of colors with countless alpine flowers blooming.
+
+The views from Dayara Bugyal are spectacular - you're surrounded by mighty Himalayan peaks including Bandarpunch, Draupadi Ka Danda, Srikanth, Jaonli, and Gangotri ranges. The best views are from Bakaria Top (12,000 ft), the highest point of the trek, where you get a complete 360-degree panorama.
+
+What makes Dayara Bugyal special is its versatility - it's beautiful in every season. Summer offers green meadows and wildflowers, autumn brings clear skies and golden grasslands, and winter transforms it into a pristine snow wonderland. It's perfect for families, beginners, and anyone who wants to experience the magic of Himalayan meadows.`,
+
+        highlights: [
+            'Walk on vast, pristine high-altitude meadows',
+            '360° views from Bakaria Top (12,000 ft)',
+            'Views of Bandarpunch, Draupadi Ka Danda, Srikanth peaks',
+            'Beautiful alpine flowers in summer',
+            'Oak and pine forest trails',
+            'Perfect beginner and family-friendly trek',
+            'Beautiful in all seasons - summer, autumn, and winter',
+            'Easy access from Uttarkashi'
+        ],
+
+        price: '₹7,950',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Not included',
+            transport: 'Available from Dehradun/Uttarkashi'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Dehradun to Barsu',
+                description: 'Drive from Dehradun to Barsu village via Uttarkashi (7-8 hours). Beautiful journey along the Bhagirathi River. Overnight in guesthouse/camps. Altitude: 7,600 ft.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Barsu to Gui',
+                description: 'Begin trek through dense oak forests. Gradual ascent with increasing meadow views. First glimpses of the bugyals. Reach Gui campsite (10,200 ft). Trek duration: 4-5 hours.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Gui to Dayara Bugyal and Bakaria Top',
+                description: 'Trek across the vast Dayara meadows. Continue to Bakaria Top (12,000 ft) for spectacular 360° mountain views. Return to Dayara Bugyal camp (11,150 ft). Trek duration: 5-6 hours.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Dayara Bugyal to Barsu',
+                description: 'Descend through meadows and forests back to Barsu village. Enjoy the changing landscapes. Trek duration: 5-6 hours. Overnight at Barsu.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Barsu to Dehradun',
+                description: 'Drive back to Dehradun. Arrive by evening with wonderful meadow trek memories.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation in guesthouses and tents',
+            'All meals during the trek',
+            'Trek permits and forest fees',
+            'Experienced trek leader and guides',
+            'Camping equipment and sleeping bags',
+            'First aid kit'
+        ],
+
+        exclusions: [
+            'Transport from Dehradun',
+            'Personal trekking gear',
+            'Personal porter/offloading charges',
+            'Insurance',
+            'Meals during transit',
+            'Any personal expenses'
+        ],
+
+        fitnessRequirements: [
+            'Basic fitness level sufficient',
+            'Ability to trek 4-5 hours daily',
+            'Perfect for first-time trekkers',
+            'Suitable for children above 8 years',
+            'Great for families and beginners'
+        ],
+
+        faqs: [
+            {
+                question: 'Is Dayara Bugyal suitable for beginners and families?',
+                answer: 'Absolutely! Dayara Bugyal is one of the best beginner and family-friendly treks. The gradual ascent, moderate altitude, and beautiful scenery make it perfect for first-time trekkers and children.'
+            },
+            {
+                question: 'What is the best season to visit?',
+                answer: 'Each season has its charm. Summer (May-June) offers green meadows and wildflowers. Autumn (Sep-Nov) has clear skies and golden grasslands. Winter (Dec-Mar) transforms it into a snow paradise.'
+            },
+            {
+                question: 'Can I see alpine flowers?',
+                answer: 'Yes! During May and June, the meadows are covered with beautiful alpine flowers including primulas, potentillas, and countless other wild blooms.'
+            },
+            {
+                question: 'How are the campsites?',
+                answer: 'The campsites are stunning! You camp in the middle of vast meadows with 360° mountain views. The sunrise and sunset views from the camps are absolutely magical.'
+            }
+        ],
+
+        trekType: ['Meadow', 'Beginner', 'Family', 'Scenic'],
+        groupType: ['Beginners', 'Families', 'Nature Lovers', 'Photographers'],
+        fitness: 'Low',
+        accessibility: 'Very Easy'
     },
     {
         id: 7,
