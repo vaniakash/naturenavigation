@@ -8,6 +8,7 @@ export interface Trek {
     heroTitle?: string;
     heroSubtitle?: string;
     image: string;
+    routeMap?: string; // Route map image path
 
     // Quick Facts
     region: string;
@@ -72,6 +73,7 @@ export const treksData: Trek[] = [
         bestSeason: 'Dec–Apr, Oct–Nov',
 
         image: '/kedarkantha.webp',
+        routeMap: '/himachal/AI/kedarkantha-route.webp',
 
         description: 'A classic Himalayan summit trek offering snow trails, forest walks, and a rewarding peak climb—ideal for beginners.',
         longDescription: `The Kedarkantha Trek is one of the most popular Himalayan treks in India. Known for its scenic forest trails, snow-covered paths in winter, and a thrilling summit climb, it is ideal for first-time trekkers who want to experience a true mountain ascent.
@@ -173,6 +175,7 @@ The summit offers panoramic views of major Himalayan peaks, making the climb bot
         seasons: ['Monsoon', 'Summer'],
 
         image: '/valley.webp',
+        routeMap: '/himachal/AI/valley-of-flowers-rout.webp',
 
         description: 'A UNESCO World Heritage Site trek famous for its vibrant alpine flowers, scenic valleys, and serene Himalayan landscapes—perfect for nature lovers and beginners.',
         longDescription: `The Valley of Flowers Trek is one of the most scenic and unique treks in India, located in the Chamoli district of Uttarakhand. This trek is renowned for its vast meadows that come alive during the monsoon season with hundreds of rare Himalayan flowers.
@@ -284,6 +287,7 @@ Surrounded by snow-capped peaks, waterfalls, and glacial streams, the valley off
         seasons: ['Summer', 'Autumn'],
 
         image: '/harkidun.webp',
+        routeMap: '/himachal/AI/harkidun-route.webp',
 
         description: 'An ancient trail through pristine Himalayan valleys, known for its rich culture and stunning landscapes.',
         longDescription: `Har Ki Dun is a cradle-shaped hanging valley in the Garhwal Himalayas, often called the "Valley of Gods." This trek takes you through ancient villages, dense pine forests, and alongside gushing rivers.
@@ -391,6 +395,7 @@ The valley is steeped in mythology and offers stunning views of Swargarohini pea
         heroTitle: 'Rupin Pass Trek',
         heroSubtitle: 'The Waterfall Trail - Himachal\'s Most Scenic Pass',
         image: '/RupinPassTrek/rupinpass.webp',
+        routeMap: '/himachal/AI/rupin-pass-route.webp',
 
         region: 'Himachal Pradesh',
         difficulty: 'Moderate to Difficult',
@@ -531,6 +536,7 @@ Rupin Pass is recommended for trekkers with prior experience, good fitness, and 
         heroTitle: 'Brahmatal Trek',
         heroSubtitle: 'Winter\'s Hidden Gem - Lake of Brahma',
         image: '/brahmatal.webp',
+        routeMap: '/himachal/AI/Brahmtal-trek-route.webp',
 
         region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Easy to Moderate',
@@ -658,6 +664,7 @@ Brahmatal is perfect for both beginners looking for their first winter trek and 
         heroTitle: 'Dayara Bugyal Trek',
         heroSubtitle: 'The Velvet Meadows of Uttarakhand',
         image: '/dayara-bugyal.webp',
+        routeMap: '/himachal/AI/dayarabugyal-route.webp',
 
         region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Easy',
@@ -789,6 +796,7 @@ What makes Dayara Bugyal special is its versatility - it's beautiful in every se
         seasons: ['Summer', 'Autumn'],
 
         image: '/himachal/bhrigu-lake-trek-himachal.webp',
+        routeMap: '/himachal/AI/BHRIGU-LAKE-ROUTE.webp',
 
         description: 'A high-altitude alpine lake trek near Manali, known for vast grasslands and mythological significance.',
         longDescription: `The Bhrigu Lake Trek is one of the easiest high-altitude lake treks in the Indian Himalayas. Located near Manali, this trek is famous for its wide alpine meadows, panoramic views of snow-covered peaks, and the sacred Bhrigu Lake, believed to be the meditation site of Maharishi Bhrigu.
@@ -885,6 +893,7 @@ The short duration and gradual ascent make this trek ideal for beginners who wan
         seasons: ['Spring', 'Summer', 'Autumn'],
 
         image: '/himachal/dainkund-trek-himachal.webp',
+        routeMap: '/himachal/AI/daikund-route.webp',
 
         description: 'A peaceful trek near Dalhousie offering panoramic Himalayan views and gentle trails.',
         longDescription: `The Dainkund Trek, often referred to as DKD, is a short and easy Himalayan trek located near Dalhousie. Also known as the Singing Hill, Dainkund offers stunning 360-degree views of the surrounding valleys and snow-capped peaks.
@@ -974,6 +983,7 @@ The gentle terrain and short duration make it ideal for beginners, families, and
         seasons: ['Summer', 'Monsoon'],
 
         image: '/himachal/hamta-pass-trek-himachal.webp',
+        routeMap: '/himachal/AI/hamtapass-route.webp',
 
         description: 'A dramatic crossover trek connecting lush valleys with stark desert landscapes.',
         longDescription: `The Hamta Pass Trek is one of the most popular crossover treks in Himachal Pradesh. Starting from the green meadows of Kullu Valley, the trail gradually leads into the cold desert of Lahaul, offering a striking contrast in landscapes.
@@ -1068,6 +1078,7 @@ With river crossings, snow bridges, and panoramic mountain views, Hamta Pass is 
         heroTitle: 'Kuari Pass Trek',
         heroSubtitle: 'The Curzon Trail - Gateway to Himalayan Majesty',
         image: '/trekkkie/Kuari-Pass-Winter-Trek.webp',
+        routeMap: '/himachal/AI/kauripass-route.webp',
 
         region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Easy to Moderate',
@@ -1188,6 +1199,7 @@ The Kuari Pass Trek is ideal for both beginners and experienced trekkers, offeri
         heroTitle: 'Chopta – Chandrashila Trek',
         heroSubtitle: 'Temple of the Gods & 360° Himalayan Panorama',
         image: '/trekkkie/Chopta-Tungnath-Chandrashila-trek.webp',
+        routeMap: '/himachal/AI/chopta-chandrashila-route.webp',
 
         region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Easy to Moderate',
@@ -1299,6 +1311,7 @@ The final ascent to Chandrashila summit (4,000m) is steep but short, rewarding t
         heroTitle: 'Nag Tibba Trek',
         heroSubtitle: 'The Serpent\'s Peak - Perfect Weekend Himalayan Escape',
         image: '/trekkkie/nag-tibba-trek.webp',
+        routeMap: '/himachal/AI/nag-tibba-route.webp',
 
         region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Easy',
@@ -1401,6 +1414,7 @@ The summit rewards trekkers with stunning views of Himalayan giants including Sw
         heroTitle: 'Kedartal Trek',
         heroSubtitle: 'The Emerald Lake at the Feet of Thalay Sagar',
         image: '/trekkkie/Kedartal-Trek-Uttarkashi.webp',
+        routeMap: '/himachal/AI/kedar-tal-route.webp',
 
         region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Difficult',
@@ -1535,6 +1549,7 @@ This trek is recommended only for experienced trekkers with good fitness and pri
         heroTitle: 'Gaumukh – Tapovan Trek',
         heroSubtitle: 'Source of the Ganga - Where Heaven Meets Earth',
         image: '/trekkkie/gaumukh_tapovan.webp',
+        routeMap: '/himachal/AI/gaumukh-route.webp',
 
         region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Moderate to Difficult',
@@ -1669,6 +1684,7 @@ Tapovan is a surreal landscape - a green meadow surrounded by towering peaks and
         heroTitle: 'Pindari Glacier Trek',
         heroSubtitle: 'Journey to the Heart of Kumaon Himalayas',
         image: '/trekkkie/Pindari_Glacier_Trek.webp',
+        routeMap: '/himachal/AI/pindari-route.webp',
 
         region: 'Kumaon Himalaya (Uttarakhand)',
         difficulty: 'Easy to Moderate',

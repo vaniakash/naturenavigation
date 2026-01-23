@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Mountain } from 'lucide-react';
 import styles from './TrekPageHeader.module.css';
 
@@ -8,9 +9,35 @@ interface TrekPageHeaderProps {
     totalTreks?: number;
 }
 
+const heroImages = [
+    '/back.webp',
+    '/himachal/AI/the-great-himalaya.webp'
+];
+
 export default function TrekPageHeader({ totalTreks = 0 }: TrekPageHeaderProps) {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+        }, 8000); // 8 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className={styles.header}>
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={currentImageIndex}
+                    className={styles.backgroundImage}
+                    style={{ backgroundImage: `url(${heroImages[currentImageIndex]})` }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1 }}
+                />
+            </AnimatePresence>
             <div className={styles.backgroundPattern} />
             <div className={styles.container}>
                 <motion.div

@@ -263,7 +263,7 @@ export default function AdminDashboard() {
                         {activeTab === 'users' && (
                             <div className={styles.sectionCard}>
                                 <div className={styles.cardHeader}>
-                                    <h2 className={styles.cardTitle}>registered Users</h2>
+                                    <h2 className={styles.cardTitle}>Registered Users</h2>
                                 </div>
                                 <div className={styles.tableWrapper}>
                                     <table className={styles.table}>
