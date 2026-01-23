@@ -103,7 +103,7 @@ export default function Navbar() {
 
     const mobileMenuVariants = {
         closed: {
-            x: '100%',
+            y: '100%',
             transition: {
                 type: 'spring' as const,
                 stiffness: 400,
@@ -111,7 +111,7 @@ export default function Navbar() {
             }
         },
         open: {
-            x: 0,
+            y: 0,
             transition: {
                 type: 'spring' as const,
                 stiffness: 400,

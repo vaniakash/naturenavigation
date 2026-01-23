@@ -4,17 +4,19 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 999999;
+    background: #ffffff;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(226, 232, 240, 0.3);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    isolation: isolate;
 }
 
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,7 +28,8 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    z-index: 10;
+    z-index: 9999;
+    position: relative;
 }
 
 .logoWrapper {
@@ -146,7 +149,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem;
+    padding: 0.625rem;
     background: transparent;
     border: 2px solid #e2e8f0;
     border-radius: 12px;
@@ -166,37 +169,40 @@
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 998;
+    z-index: 999998;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
-/* Mobile Menu */
+/* Mobile Menu - Bottom Sheet Style */
 .mobileMenu {
     position: fixed;
-    top: 0;
-    right: 0;
     bottom: 0;
-    width: 320px;
-    max-width: 85vw;
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
-    z-index: 999;
-    padding: 2rem 1.5rem;
+    left: 0;
+    right: 0;
+    max-height: 85vh;
+    background: #ffffff;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15);
+    z-index: 999999;
+    padding: 1.5rem;
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    border-radius: 24px 24px 0 0;
 }
 
 .mobileMenuHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .menuTitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #0f172a;
     margin: 0;
@@ -221,19 +227,32 @@
     color: #0f172a;
 }
 
+/* Drag Handle */
+.mobileMenu::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: #cbd5e1;
+    border-radius: 2px;
+}
+
 /* Mobile Navigation Links */
 .mobileNavLinks {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .mobileNavLink {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1.25rem;
+    padding: 1rem;
     font-weight: 500;
     font-size: 1rem;
     color: #475569;
@@ -264,9 +283,8 @@
 
 .mobileDivider {
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, #e2e8f0 50%, transparent 100%);
+    background: #e2e8f0;
     margin: 1rem 0;
-    transform-origin: left;
 }
 
 /* Mobile Auth Buttons */
@@ -275,6 +293,7 @@
     flex-direction: column;
     gap: 0.75rem;
     margin-top: auto;
+    padding-top: 1rem;
 }
 
 .mobileAuthButtons .btnPrimary,
@@ -282,12 +301,13 @@
 .mobileAuthButtons .btnGhost {
     width: 100%;
     justify-content: center;
+    padding: 0.875rem 1.25rem;
 }
 
 /* Tablet & Desktop Breakpoints */
 @media (min-width: 768px) {
     .container {
-        padding: 0 2rem;
+        padding: 1rem 2rem;
     }
 
     .logoWrapper {
@@ -307,15 +327,6 @@
 
     .mobileMenuBtn {
         display: none;
-    }
-}
-
-/* Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-    :global(*) {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
     }
 }
 
