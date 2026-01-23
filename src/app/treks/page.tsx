@@ -17,6 +17,10 @@ export default function TreksPage() {
         season: []
     });
 
+    // Pagination State
+    const [visibleCount, setVisibleCount] = useState(4);
+    const TREKS_PER_PAGE = 4;
+
     const handleFilterChange = (category: string, value: string) => {
         setSelectedFilters(prev => {
             const current = prev[category] || [];
@@ -25,6 +29,8 @@ export default function TreksPage() {
                 : [...current, value];
             return { ...prev, [category]: updated };
         });
+        // Reset pagination when filters change
+        setVisibleCount(TREKS_PER_PAGE);
     };
 
     const handleClearFilters = () => {
@@ -34,7 +40,14 @@ export default function TreksPage() {
             season: []
         });
         setSearchQuery('');
+        // Reset pagination when filters are cleared
+        setVisibleCount(TREKS_PER_PAGE);
     };
+
+    // Reset pagination when search query changes
+    useMemo(() => {
+        setVisibleCount(TREKS_PER_PAGE);
+    }, [searchQuery]);
 
     const filteredTreks = useMemo(() => {
         return treksData.filter(trek => {
@@ -61,6 +74,14 @@ export default function TreksPage() {
             return regionMatch && difficultyMatch && seasonMatch;
         });
     }, [searchQuery, selectedFilters]);
+
+    // Validated visible treks
+    const visibleTreks = filteredTreks.slice(0, visibleCount);
+    const hasMore = visibleCount < filteredTreks.length;
+
+    const handleLoadMore = () => {
+        setVisibleCount(prev => prev + TREKS_PER_PAGE);
+    };
 
     return (
         <div className={styles.pageContainer}>
@@ -96,14 +117,27 @@ export default function TreksPage() {
                         </motion.div>
 
                         {filteredTreks.length > 0 ? (
-                            <motion.div
-                                className={styles.grid}
-                                layout
-                            >
-                                {filteredTreks.map((trek, index) => (
-                                    <TrekCard key={trek.id} trek={trek} index={index} />
-                                ))}
-                            </motion.div>
+                            <>
+                                <motion.div
+                                    className={styles.grid}
+                                    layout
+                                >
+                                    {visibleTreks.map((trek, index) => (
+                                        <TrekCard key={trek.id} trek={trek} index={index} />
+                                    ))}
+                                </motion.div>
+
+                                {hasMore && (
+                                    <div className={styles.loadMoreContainer}>
+                                        <button
+                                            onClick={handleLoadMore}
+                                            className={styles.loadMoreButton}
+                                        >
+                                            View More Treks
+                                        </button>
+                                    </div>
+                                )}
+                            </>
                         ) : (
                             <motion.div
                                 className={styles.noResults}
