@@ -1,16 +1,21 @@
-/* Modern Navbar with Glassmorphism */
+/* Solid Reliable Navbar for Safari compatibility */
 .navbar {
-    position: sticky;
+    position: fixed;
+    /* Changed from sticky to fixed */
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999999;
+    height: 80px;
+    /* Fixed height to reserve space */
+    z-index: 9999999;
+    /* Max z-index */
     background: #ffffff;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(226, 232, 240, 0.3);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    isolation: isolate;
+    border-bottom: 1px solid rgba(226, 232, 240, 1);
+    /* Force Hardware Acceleration in WebKit/Safari */
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    /* Remove confusing filters */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .container {
