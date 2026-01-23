@@ -1,0 +1,128 @@
+/* Full Screen Menu Page */
+.menuContainer {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 99999;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+.closeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 50%;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    /* In case it's a link */
+}
+
+.closeBtn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+    transform: rotate(90deg);
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.navLink {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.navLink:hover {
+    color: #22c55e;
+}
+
+.navLinkActive {
+    color: #22c55e;
+}
+
+.authButtons {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+    align-self: center;
+    margin-bottom: 2rem;
+}
+
+.btnPrimary,
+.btnSecondary,
+.btnGhost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    text-decoration: none;
+    width: 100%;
+}
+
+.btnPrimary {
+    background: #22c55e;
+    color: white;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.btnPrimary:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+}
+
+.btnSecondary {
+    background: transparent;
+    color: #22c55e;
+    border: 1px solid #22c55e;
+}
+
+.btnSecondary:hover {
+    background: #f0fdf4;
+}
+
+.btnGhost {
+    background: transparent;
+    color: #64748b;
+}
+
+.btnGhost:hover {
+    color: #0f172a;
+    background: rgba(0, 0, 0, 0.03);
+}
