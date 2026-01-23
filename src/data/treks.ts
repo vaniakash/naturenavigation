@@ -726,5 +726,735 @@ With river crossings, snow bridges, and panoramic mountain views, Hamta Pass is 
         groupType: ['Intermediate', 'Adventure Seekers'],
         fitness: 'Medium',
         accessibility: 'Moderate'
+    },
+
+    // Kuari Pass Trek
+    {
+        id: 10,
+        slug: 'kuari-pass',
+        name: 'Kuari Pass Trek',
+        heroTitle: 'Kuari Pass Trek',
+        heroSubtitle: 'The Curzon Trail - Gateway to Himalayan Majesty',
+        image: '/trekkkie/Kuari-Pass-Winter-Trek.webp',
+
+        region: 'Garhwal Himalaya (Uttarakhand)',
+        difficulty: 'Easy to Moderate',
+        duration: '6 Days',
+        durationDays: 6,
+        altitude: '12,763 ft',
+        bestSeason: 'Dec – Apr',
+        seasons: ['Winter', 'Spring'],
+
+        description: 'A classic Himalayan trail offering breathtaking views of Nanda Devi and surrounding peaks, perfect for trekkers seeking scenic mountain panoramas.',
+
+        longDescription: `The Kuari Pass Trek, also known as the Lord Curzon Trail, is one of the most beautiful winter treks in the Indian Himalayas. This classic trail offers unparalleled 360-degree views of some of India's highest peaks including Nanda Devi, Dronagiri, Kamet, and Chaukhamba.
+
+Named after Lord Curzon who trekked this route in 1905, this trail takes you through pristine oak and rhododendron forests, vast meadows blanketed in snow (during winter), and charming Garhwali villages. The trek is especially stunning in winter when the entire landscape transforms into a white wonderland.
+
+The Kuari Pass Trek is ideal for both beginners and experienced trekkers, offering a perfect blend of scenic beauty, moderate challenge, and cultural immersion. The sunrise views from the summit are truly unforgettable, with the golden rays illuminating the snow-capped peaks.`,
+
+        highlights: [
+            'Panoramic views of Nanda Devi, Dronagiri, Kamet, and Chaukhamba peaks',
+            'Walk through dense oak and rhododendron forests',
+            'Experience traditional Garhwali village life',
+            'Spectacular sunrise and sunset views from campsites',
+            'Winter wonderland experience with snow-covered meadows',
+            'Historic Lord Curzon Trail route'
+        ],
+
+        price: '₹9,950',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Not included',
+            transport: 'Available from Rishikesh/Haridwar'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Rishikesh to Joshimath',
+                description: 'Scenic drive along the Alaknanda River through Devprayag and Rudraprayag. Reach Joshimath (6,150 ft) by evening. Overnight in hotel.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Joshimath to Dhak via Auli',
+                description: 'Short drive to Auli, then begin trek through meadows and forests. Reach Dhak campsite (9,022 ft). Trek duration: 4-5 hours.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Dhak to Gulling via Chitrakantha',
+                description: 'Trek through rhododendron forests to Chitrakantha ridge with first views of major peaks. Continue to Gulling Top campsite (11,024 ft). Trek duration: 6-7 hours.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Gulling to Kuari Pass and back to Tali',
+                description: 'Summit day! Early morning trek to Kuari Pass (12,763 ft) for magnificent sunrise views. Descend to Tali campsite via forests. Trek duration: 8-9 hours.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Tali to Auli',
+                description: 'Descend through beautiful meadows back to Auli. Drive to Joshimath for overnight stay. Trek duration: 5-6 hours.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Joshimath to Rishikesh',
+                description: 'Drive back to Rishikesh with memories of the stunning Kuari Pass trek. Arrive by evening.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation in hotels and tents',
+            'All meals from Day 1 dinner to Day 6 breakfast',
+            'Trek permits and forest fees',
+            'Experienced trek leader and support staff',
+            'First aid kit and oxygen cylinder',
+            'All camping equipment and sleeping bags'
+        ],
+
+        exclusions: [
+            'Transport to/from Rishikesh',
+            'Personal trekking gear',
+            'Porter/offloading charges',
+            'Insurance',
+            'Any meals during transit',
+            'Personal expenses'
+        ],
+
+        fitnessRequirements: [
+            'Ability to trek 5-7 hours daily',
+            'Basic cardiovascular fitness',
+            'Suitable for beginners with good fitness',
+            'Prior trekking experience helpful but not mandatory'
+        ],
+
+        faqs: [
+            {
+                question: 'Is Kuari Pass suitable for beginners?',
+                answer: 'Yes! Kuari Pass is one of the best treks for beginners with good fitness. The gradual ascent and moderate altitude make it ideal for first-time trekkers.'
+            },
+            {
+                question: 'What is the best time to do this trek?',
+                answer: 'Winter (December to February) offers snow-covered landscapes, while spring (March-April) provides clear skies and blooming rhododendrons. Both seasons are spectacular.'
+            },
+            {
+                question: 'Can I see Nanda Devi from this trek?',
+                answer: 'Yes! Kuari Pass offers one of the best views of Nanda Devi (India\'s second-highest peak) along with 20+ other major Himalayan peaks.'
+            }
+        ],
+
+        trekType: ['Pass', 'Ridge', 'Scenic'],
+        groupType: ['Beginners', 'Photographers', 'Nature Lovers'],
+        fitness: 'Medium',
+        accessibility: 'Easy to Moderate'
+    },
+
+    // Chopta Chandrashila Trek
+    {
+        id: 11,
+        slug: 'chopta-chandrashila',
+        name: 'Chopta – Chandrashila Trek',
+        heroTitle: 'Chopta – Chandrashila Trek',
+        heroSubtitle: 'Temple of the Gods & 360° Himalayan Panorama',
+        image: '/trekkkie/Chopta-Tungnath-Chandrashila-trek.webp',
+
+        region: 'Garhwal Himalaya (Uttarakhand)',
+        difficulty: 'Easy to Moderate',
+        duration: '4 Days',
+        durationDays: 4,
+        altitude: '13,123 ft',
+        bestSeason: 'Dec – Apr',
+        seasons: ['Winter', 'Spring'],
+
+        description: 'A scenic and spiritual trek leading to the Tungnath Temple and Chandrashila summit, known for its 360° Himalayan views.',
+
+        longDescription: `The Chopta-Chandrashila Trek is a perfect blend of spirituality, adventure, and natural beauty. This short but incredibly rewarding trek takes you to Tungnath, the world's highest Shiva temple (part of the sacred Panch Kedar), and then to the majestic Chandrashila summit.
+
+Chopta, often called the "Mini Switzerland of India," serves as the base camp with its lush meadows and coniferous forests. The trek to Tungnath temple (3,680m) is a gentle climb through rhododendron and deodar forests, offering glimpses of snow-capped peaks throughout the journey.
+
+The final ascent to Chandrashila summit (4,000m) is steep but short, rewarding trekkers with breathtaking 360-degree views of the Himalayan giants including Nanda Devi, Trishul, Kedar Peak, Bandarpunch, and Chaukhamba. The trek is especially magical during winter when the entire landscape is covered in pristine snow.`,
+
+        highlights: [
+            'Visit Tungnath Temple - world\'s highest Shiva temple',
+            '360° views from Chandrashila summit',
+            'Views of Nanda Devi, Trishul, Chaukhamba, and 20+ peaks',
+            'Walk through rhododendron and deodar forests',
+            'Beautiful meadows of Chopta',
+            'Spectacular sunrise from the summit',
+            'Winter wonderland experience with snow trekking'
+        ],
+
+        price: '₹6,950',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Not included',
+            transport: 'Available from Haridwar/Rishikesh'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Haridwar to Chopta',
+                description: 'Drive from Haridwar to Chopta (8,790 ft) via Devprayag and Rudraprayag. Approximately 8-9 hours journey through scenic mountain roads. Overnight in camps/guesthouse.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Chopta to Tungnath to Chandrashila Summit',
+                description: 'Early morning trek to Tungnath Temple (3.5 km, 3-4 hours). After darshan, continue to Chandrashila summit (1.5 km steep climb, 1.5-2 hours). Enjoy panoramic views and return to Chopta. Total trek: 6-7 hours.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Explore Deoria Tal (Optional)',
+                description: 'Optional trek to the beautiful Deoria Tal lake or rest day at Chopta. Explore the meadows and forests. Overnight at Chopta.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Chopta to Haridwar',
+                description: 'Drive back to Haridwar/Rishikesh. Arrive by evening with beautiful memories.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation in camps/guesthouses',
+            'All meals during the trek',
+            'Trek permits and temple entry fees',
+            'Experienced trek leader',
+            'First aid and safety equipment',
+            'Forest camping fees'
+        ],
+
+        exclusions: [
+            'Transport from Haridwar/Rishikesh',
+            'Personal trekking gear',
+            'Porter charges',
+            'Insurance',
+            'Meals during transit',
+            'Any personal expenses'
+        ],
+
+        fitnessRequirements: [
+            'Ability to trek 4-5 hours',
+            'Basic fitness level required',
+            'Suitable for beginners and families',
+            'Children above 10 years can participate'
+        ],
+
+        faqs: [
+            {
+                question: 'Can children do this trek?',
+                answer: 'Yes! The trek is suitable for children above 10 years with reasonable fitness. The well-maintained trail makes it family-friendly.'
+            },
+            {
+                question: 'Is the Tungnath temple open in winter?',
+                answer: 'The temple closes around Diwali and reopens in May. However, you can still visit the temple area and continue to Chandrashila summit during winter.'
+            },
+            {
+                question: 'How difficult is the final climb to Chandrashila?',
+                answer: 'The final 1.5 km from Tungnath to Chandrashila is steep but short. Take it slow with regular breaks, and it\'s very doable.'
+            }
+        ],
+
+        trekType: ['Summit', 'Spiritual', 'Scenic'],
+        groupType: ['Beginners', 'Families', 'Pilgrims'],
+        fitness: 'Low to Medium',
+        accessibility: 'Easy'
+    },
+
+    // Nag Tibba Trek
+    {
+        id: 12,
+        slug: 'nag-tibba',
+        name: 'Nag Tibba Trek',
+        heroTitle: 'Nag Tibba Trek',
+        heroSubtitle: 'The Serpent\'s Peak - Perfect Weekend Himalayan Escape',
+        image: '/trekkkie/nag-tibba-trek.webp',
+
+        region: 'Garhwal Himalaya (Uttarakhand)',
+        difficulty: 'Easy',
+        duration: '2 Days',
+        durationDays: 2,
+        altitude: '9,915 ft',
+        bestSeason: 'Dec – Mar',
+        seasons: ['Winter'],
+
+        description: 'A short and beginner-friendly trek near Mussoorie, offering forest trails, snow walks in winter, and beautiful summit views.',
+
+        longDescription: `Nag Tibba, meaning "Serpent's Peak," is the perfect weekend getaway trek for beginners and seasoned trekkers alike. Located just 90 km from Dehradun and 57 km from Mussoorie, this is one of the most accessible Himalayan treks, making it ideal for first-timers and those short on time.
+
+Despite being a short trek, Nag Tibba doesn't compromise on the Himalayan experience. The trail takes you through dense oak and rhododendron forests, charming Garhwali villages, and pristine meadows. During winter (December to March), the trek transforms into a snow wonderland, perfect for those wanting their first snow trekking experience.
+
+The summit rewards trekkers with stunning views of Himalayan giants including Swargarohini, Bandarpunch, Kedarnath, Gangotri, and even distant views of Nanda Devi. The ancient Nag Tibba temple at the summit adds a spiritual dimension to this beautiful trek.`,
+
+        highlights: [
+            'Perfect weekend trek - just 2 days',
+            'Easily accessible from Delhi/Dehradun',
+            'Ideal first Himalayan trek for beginners',
+            'Beautiful snow trekking experience in winter',
+            'Views of Bandarpunch, Swargarohini, Kedarnath peaks',
+            'Walk through oak and rhododendron forests',
+            'Visit the ancient Nag Tibba temple',
+            'Experience traditional Garhwali village life'
+        ],
+
+        price: '₹4,950',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Not included',
+            transport: 'Available from Dehradun'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Dehradun to Pantwari to Nag Tibba Base',
+                description: 'Drive from Dehradun to Pantwari village (3-4 hours). Begin trek through forests and meadows to Nag Tibba base camp (7,940 ft). Trek duration: 4-5 hours. Overnight in tents.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Summit & Descent',
+                description: 'Early morning summit climb to Nag Tibba peak (9,915 ft) - 2 hours. Enjoy 360° views, visit the temple, and descend to Pantwari. Drive back to Dehradun. Total trek: 6-7 hours.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation in tents',
+            'All meals from Day 1 lunch to Day 2 lunch',
+            'Trek permits and forest fees',
+            'Experienced trek leader and guide',
+            'First aid kit',
+            'Camping equipment and sleeping bags'
+        ],
+
+        exclusions: [
+            'Transport from Dehradun to Pantwari',
+            'Personal trekking gear (shoes, backpack)',
+            'Porter/offloading charges',
+            'Insurance',
+            'Any meals except mentioned',
+            'Personal expenses'
+        ],
+
+        fitnessRequirements: [
+            'Ability to walk 4-5 hours',
+            'Basic fitness sufficient',
+            'Perfect for first-time trekkers',
+            'No prior trekking experience needed'
+        ],
+
+        faqs: [
+            {
+                question: 'Is Nag Tibba good for first-time trekkers?',
+                answer: 'Absolutely! Nag Tibba is one of the best treks for beginners. The short duration, moderate difficulty, and beautiful scenery make it perfect for your first Himalayan experience.'
+            },
+            {
+                question: 'Can I do this trek in 2 days from Delhi?',
+                answer: 'Yes! You can easily do a weekend trip from Delhi. Drive/travel on Friday night, trek on Saturday-Sunday, and return Sunday evening.'
+            },
+            {
+                question: 'Will there be snow?',
+                answer: 'December to March usually sees good snowfall. The trail and summit are covered in beautiful snow, making it a winter wonderland.'
+            }
+        ],
+
+        trekType: ['Summit', 'Weekend', 'Beginner'],
+        groupType: ['Beginners', 'Weekend Warriors', 'First-timers'],
+        fitness: 'Low',
+        accessibility: 'Very Easy'
+    },
+
+    // Kedartal Trek
+    {
+        id: 13,
+        slug: 'kedartal',
+        name: 'Kedartal Trek',
+        heroTitle: 'Kedartal Trek',
+        heroSubtitle: 'The Emerald Lake at the Feet of Thalay Sagar',
+        image: '/trekkkie/Kedartal-Trek-Uttarkashi.webp',
+
+        region: 'Garhwal Himalaya (Uttarakhand)',
+        difficulty: 'Difficult',
+        duration: '7 Days',
+        durationDays: 7,
+        altitude: '15,600 ft',
+        bestSeason: 'May – Jun',
+        seasons: ['Summer'],
+
+        description: 'A challenging high-altitude trek to a stunning glacial lake surrounded by towering Himalayan peaks, ideal for experienced trekkers.',
+
+        longDescription: `Kedartal Trek is one of the most challenging and rewarding high-altitude treks in the Indian Himalayas. This demanding trail takes you to the pristine glacial Kedartal Lake (4,750m), nestled at the foot of the mighty Thalay Sagar peak (6,904m), one of the most beautiful mountains in the Himalayas.
+
+The emerald-green lake, believed to be the source of the sacred Kedar Ganga, holds immense religious significance and is often called "Shiva's Lake." The trek is particularly challenging due to its steep ascents, rocky terrain, high altitude, and exposure to harsh mountain weather.
+
+This trek is recommended only for experienced trekkers with good fitness and prior high-altitude experience. The reward, however, is unparalleled - crystal clear glacial waters reflecting the towering peaks of Thalay Sagar, Bhrigupanth, Jogin, and Manda peaks. The raw, rugged beauty of this trek leaves an indelible mark on every adventurer who completes it.`,
+
+        highlights: [
+            'Stunning Kedartal Lake at 15,600 ft',
+            'Close-up views of majestic Thalay Sagar peak',
+            'Views of Bhrigupanth, Jogin, and Manda peaks',
+            'Walk on glacial moraines and boulder fields',
+            'Source of the Kedar Ganga river',
+            'Pristine high-altitude camping experience',
+            'One of the most challenging treks in Garhwal',
+            'Minimal crowds - true wilderness experience'
+        ],
+
+        price: '₹15,950',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Mandatory and not included',
+            transport: 'Available from Dehradun/Rishikesh'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Dehradun to Gangotri',
+                description: 'Drive from Dehradun to Gangotri (10,203 ft) via Uttarkashi. Approximately 10-11 hours journey. Overnight in guesthouse. Acclimatization and preparation.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Gangotri to Bhoj Kharak',
+                description: 'Begin trek from Gangotri village. Steep ascent through birch and rhododendron forests to Bhoj Kharak campsite (11,482 ft). Trek duration: 5-6 hours.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Bhoj Kharak to Kedar Kharak',
+                description: 'Continue steep ascent through boulder sections and moraine. Cross Kedar Ganga multiple times. Reach Kedar Kharak (13,940 ft). Trek duration: 6-7 hours.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Kedar Kharak to Kedartal & Back',
+                description: 'Summit day! Very early start for steep climb to Kedartal (15,600 ft). Difficult terrain with boulders and loose rocks. Spend time at the lake, then descend to Kedar Kharak. Trek duration: 8-9 hours.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Kedar Kharak to Bhoj Kharak',
+                description: 'Descend back to Bhoj Kharak. Trek duration: 5-6 hours. Rest and recover.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Bhoj Kharak to Gangotri',
+                description: 'Final descent to Gangotri. Trek duration: 4-5 hours. Overnight in guesthouse.'
+            },
+            {
+                day: 'Day 7',
+                title: 'Gangotri to Dehradun',
+                description: 'Drive back to Dehradun. Arrive by evening.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation in guesthouses and tents',
+            'All meals during the trek',
+            'Trek permits and forest fees',
+            'Highly experienced trek leader and guides',
+            'High-altitude camping equipment',
+            'First aid, oxygen cylinder, and safety gear',
+            'Porter support for common equipment'
+        ],
+
+        exclusions: [
+            'Transport from Dehradun',
+            'Personal trekking gear and equipment',
+            'Personal porter/offloading charges',
+            'Mandatory trekking insurance',
+            'Meals during transit',
+            'Emergency evacuation costs',
+            'Any personal expenses'
+        ],
+
+        fitnessRequirements: [
+            'Excellent physical fitness required',
+            'Ability to trek 7-8 hours on difficult terrain',
+            'Prior high-altitude trekking experience mandatory',
+            'Good acclimatization and stamina',
+            'Should have completed at least 2-3 moderate to difficult treks'
+        ],
+
+        faqs: [
+            {
+                question: 'Is this trek suitable for beginners?',
+                answer: 'No. Kedartal is one of the most difficult treks in India. It requires prior high-altitude trekking experience, excellent fitness, and mental determination.'
+            },
+            {
+                question: 'When is the best time to trek?',
+                answer: 'May to June is ideal when the trail is accessible and weather is relatively stable. Avoid monsoon season (July-September) due to landslides and heavy rain.'
+            },
+            {
+                question: 'Do I need insurance?',
+                answer: 'Yes, trekking insurance covering high-altitude adventure activities is mandatory for this trek due to the high risk and remote location.'
+            },
+            {
+                question: 'How do I prepare for this trek?',
+                answer: 'Start cardiovascular training 2-3 months before. Do strength training, especially legs. Complete 1-2 moderate Himalayan treks beforehand. Mental preparation is equally important.'
+            }
+        ],
+
+        trekType: ['Lake', 'High Altitude', 'Challenging', 'Glacial'],
+        groupType: ['Experienced Trekkers', 'Adventure Seekers'],
+        fitness: 'Very High',
+        accessibility: 'Difficult'
+    },
+
+    // Gaumukh Tapovan Trek
+    {
+        id: 14,
+        slug: 'gaumukh-tapovan',
+        name: 'Gaumukh – Tapovan Trek',
+        heroTitle: 'Gaumukh – Tapovan Trek',
+        heroSubtitle: 'Source of the Ganga - Where Heaven Meets Earth',
+        image: '/trekkkie/gaumukh_tapovan.webp',
+
+        region: 'Garhwal Himalaya (Uttarakhand)',
+        difficulty: 'Moderate to Difficult',
+        duration: '7 Days',
+        durationDays: 7,
+        altitude: '14,203 ft',
+        bestSeason: 'May – Jun',
+        seasons: ['Summer'],
+
+        description: 'A spiritually significant trek to the source of the River Ganga, featuring vast alpine meadows and dramatic mountain views.',
+
+        longDescription: `The Gaumukh-Tapovan Trek is one of the most sacred and spectacular treks in the Indian Himalayas. This challenging yet incredibly rewarding journey takes you to Gaumukh, the glacial snout of the Gangotri glacier where the holy River Ganga originates, and then to the pristine alpine meadows of Tapovan.
+
+Gaumukh (literally "cow's mouth") is where you witness the birth of India's most sacred river. The sight of the mighty Gangotri glacier calving ice into the freezing waters is both humbling and awe-inspiring. From Gaumukh, the trek ascends to Tapovan (4,350m), a vast high-altitude meadow that offers breathtaking close-up views of Mt. Shivling, often called the "Matterhorn of India."
+
+Tapovan is a surreal landscape - a green meadow surrounded by towering peaks and glaciers. The area is also dotted with sadhus' huts who meditate in this harsh yet beautiful environment. This trek combines spirituality, adventure, and unparalleled natural beauty, making it a bucket-list trek for serious Himalayan enthusiasts.`,
+
+        highlights: [
+            'Visit Gaumukh - the sacred source of River Ganga',
+            'Witness the massive Gangotri Glacier',
+            'Camp at Tapovan meadows (14,203 ft)',
+            'Close-up views of Mt. Shivling (21,467 ft)',
+            'Views of Bhagirathi peaks, Meru, and Sudarshan Parbat',
+            'Walk on glacial moraines and high-altitude meadows',
+            'Spiritual experience at the source of Ganga',
+            'Interact with sadhus meditating in Tapovan'
+        ],
+
+        price: '₹14,950',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Recommended but not included',
+            transport: 'Available from Dehradun/Rishikesh'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Dehradun to Gangotri',
+                description: 'Drive from Dehradun to Gangotri (10,203 ft) via Uttarkashi. Approximately 10-11 hours. Check permits, rest, and acclimatize. Overnight in guesthouse.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Gangotri to Chirbasa',
+                description: 'Begin trek alongside Bhagirathi River. Gradual ascent through birch forests to Chirbasa campsite (11,700 ft). Trek duration: 4-5 hours.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Chirbasa to Bhojbasa',
+                description: 'Continue trek above the tree line. Sparse vegetation and rocky terrain. Reach Bhojbasa (12,467 ft) with views of Bhagirathi peaks. Trek duration: 5-6 hours.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Bhojbasa to Gaumukh to Tapovan',
+                description: 'Trek to Gaumukh glacier (13,000 ft). Pay respects and witness the source of Ganga. Challenging ascent on glacier and moraine to reach Tapovan meadows (14,203 ft). Trek duration: 6-7 hours.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Explore Tapovan',
+                description: 'Rest and acclimatization day. Explore Tapovan meadows, visit nearby viewpoints for Shivling views, interact with sadhus. Optional exploration of surrounding areas.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Tapovan to Bhojbasa',
+                description: 'Descend from Tapovan to Bhojbasa. Trek duration: 5-6 hours. Overnight at camp.'
+            },
+            {
+                day: 'Day 7',
+                title: 'Bhojbasa to Gangotri to Dehradun',
+                description: 'Descend to Gangotri (4-5 hours trek). Drive back to Dehradun. Arrive late evening.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation in guesthouses and tents',
+            'All meals during the trek',
+            'Trek permits and Inner Line Permits',
+            'Experienced trek leader and guides',
+            'High-altitude camping equipment',
+            'First aid and oxygen support',
+            'Porter support for common gear'
+        ],
+
+        exclusions: [
+            'Transport from Dehradun/Rishikesh',
+            'Personal trekking gear',
+            'Personal porter/offloading charges',
+            'Trekking insurance',
+            'Meals during transit days',
+            'Any personal expenses',
+            'Emergency evacuation charges'
+        ],
+
+        fitnessRequirements: [
+            'Good to excellent physical fitness',
+            'Ability to trek 6-7 hours daily',
+            'Prior high-altitude experience recommended',
+            'Good acclimatization and endurance',
+            'The glacier crossing requires care and stamina'
+        ],
+
+        faqs: [
+            {
+                question: 'Do I need special permits?',
+                answer: 'Yes, you need Inner Line Permit (ILP) for this trek as it enters sensitive areas. Your trek operator will arrange this, but carry valid ID proof.'
+            },
+            {
+                question: 'Is the glacier crossing safe?',
+                answer: 'The glacier crossing to Tapovan requires care and proper guidance. Our experienced guides will ensure safe crossing. Following instructions is crucial.'
+            },
+            {
+                question: 'When is the best time for this trek?',
+                answer: 'May to June is ideal when the route is open and weather is stable. Early September is also possible but riskier due to unpredictable weather.'
+            },
+            {
+                question: 'Will I see sadhus at Tapovan?',
+                answer: 'Yes, usually 2-3 sadhus stay at Tapovan during summer months, meditating in this sacred space. You can interact with them respectfully.'
+            }
+        ],
+
+        trekType: ['Glacier', 'Spiritual', 'High Altitude', 'Meadow'],
+        groupType: ['Experienced Trekkers', 'Pilgrims', 'Photographers'],
+        fitness: 'High',
+        accessibility: 'Moderate to Difficult'
+    },
+
+    // Pindari Glacier Trek
+    {
+        id: 15,
+        slug: 'pindari-glacier',
+        name: 'Pindari Glacier Trek',
+        heroTitle: 'Pindari Glacier Trek',
+        heroSubtitle: 'Journey to the Heart of Kumaon Himalayas',
+        image: '/trekkkie/Pindari_Glacier_Trek.webp',
+
+        region: 'Kumaon Himalaya (Uttarakhand)',
+        difficulty: 'Easy to Moderate',
+        duration: '6 Days',
+        durationDays: 6,
+        altitude: '12,300 ft',
+        bestSeason: 'Apr – Jun, Sep – Oct',
+        seasons: ['Summer', 'Autumn'],
+
+        description: 'A classic glacier trek through scenic valleys and villages, offering a balanced mix of adventure and natural beauty.',
+
+        longDescription: `The Pindari Glacier Trek is one of the most beautiful and accessible glacier treks in the Kumaon region of Uttarakhand. This classic Himalayan trek takes you through picturesque villages, dense forests, lush meadows, and alongside the roaring Pindar River to the magnificent Pindari Glacier.
+
+What makes this trek special is the perfect balance it offers - it's challenging enough to give you a true Himalayan trekking experience, yet accessible enough for trekkers with moderate fitness. The trail passes through charming Kumaoni villages like Khati, where you can experience the warm hospitality and unique culture of the local people.
+
+The glacier itself is a stunning sight - a massive river of ice nestled between towering peaks like Nanda Devi, Nanda Kot, and Panwali Dwar. The trek offers spectacular views throughout, especially from Pindari Zero Point where you witness the glacier's snout up close.
+
+Unlike the more touristy routes in Garhwal, Pindari retains a sense of pristine wilderness and authentic mountain culture, making it a favorite among seasoned trekkers and nature lovers.`,
+
+        highlights: [
+            'Trek to the spectacular Pindari Glacier',
+            'Views of Nanda Devi, Nanda Kot, and Panwali Dwar',
+            'Walk through traditional Kumaoni villages',
+            'Experience unique Kumaoni culture and hospitality',
+            'Trek alongside the beautiful Pindar River',
+            'Walk through rhododendron and oak forests',
+            'Visit Pindari Zero Point - closest view of glacier',
+            'Relatively uncrowded trail - peaceful trekking experience'
+        ],
+
+        price: '₹12,950',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Not included',
+            transport: 'Available from Kathgodam/Haldwani'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Kathgodam to Khati',
+                description: 'Drive from Kathgodam to Loharkhet (6-7 hours). Trek 6 km to Khati village (7,600 ft), the last inhabited village on the trail. Trek duration: 3-4 hours. Overnight in guesthouse/homestay.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Khati to Dwali',
+                description: 'Trek through beautiful forests alongside Pindar River. Cross small streams and enjoy mountain views. Reach Dwali campsite (8,760 ft). Trek duration: 5-6 hours.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Dwali to Phurkiya',
+                description: 'Continue through dense forests and open meadows. The trail becomes steeper with stunning views emerging. Reach Phurkiya (10,366 ft). Trek duration: 5-6 hours.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Phurkiya to Pindari Glacier & Back',
+                description: 'Summit day! Trek to Pindari Zero Point (12,300 ft) for close-up glacier views. Spend time at the glacier, take photos, and soak in the majesty. Return to Phurkiya. Trek duration: 6-7 hours.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Phurkiya to Khati',
+                description: 'Begin descent back to Khati village. Trek duration: 7-8 hours. Overnight at Khati.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Khati to Loharkhet to Kathgodam',
+                description: 'Trek down to Loharkhet (3-4 hours). Drive back to Kathgodam. Journey ends with amazing memories.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation in guesthouses and tents',
+            'All meals during the trek',
+            'Trek permits and forest fees',
+            'Experienced trek leader and guides',
+            'Camping equipment and sleeping bags',
+            'First aid kit',
+            'Porter support for common equipment'
+        ],
+
+        exclusions: [
+            'Transport from Kathgodam',
+            'Personal trekking gear',
+            'Personal porter/offloading charges',
+            'Trekking insurance',
+            'Meals during transit',
+            'Any personal expenses'
+        ],
+
+        fitnessRequirements: [
+            'Ability to trek 5-7 hours daily',
+            'Moderate fitness level required',
+            'Suitable for beginners with good fitness',
+            'Some prior trekking experience helpful'
+        ],
+
+        faqs: [
+            {
+                question: 'Is Pindari Glacier good for first-time trekkers?',
+                answer: 'While doable for fit beginners, it\'s better suited for those with at least one prior trek. The duration and altitude make it moderately challenging.'
+            },
+            {
+                question: 'How is the accommodation on this trek?',
+                answer: 'The first night is usually in a guesthouse/homestay at Khati village. After that, it\'s camping. The local hospitality in Khati is wonderful!'
+            },
+            {
+                question: 'What is the best season for Pindari Glacier?',
+                answer: 'April-June offers clear skies and blooming rhododendrons. September-October provides post-monsoon clarity. Avoid July-August (monsoon).'
+            },
+            {
+                question: 'Can I see Nanda Devi from this trek?',
+                answer: 'Yes! On clear days, you get magnificent views of Nanda Devi, Nanda Kot, Nanda Khat, and other Kumaon peaks.'
+            }
+        ],
+
+        trekType: ['Glacier', 'Valley', 'Village', 'Scenic'],
+        groupType: ['Intermediate Trekkers', 'Nature Lovers', 'Culture Enthusiasts'],
+        fitness: 'Medium',
+        accessibility: 'Moderate'
     }
 ];
