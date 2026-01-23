@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
+import { createPortal } from 'react-dom';
 import styles from './BookingModal.module.css';
 
 interface BookingModalProps {
@@ -25,6 +26,11 @@ export default function BookingModal({ isOpen, onClose, trekId, trekName, trekPr
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData({
@@ -92,9 +98,9 @@ export default function BookingModal({ isOpen, onClose, trekId, trekName, trekPr
         }
     };
 
-    if (!isOpen) return null;
+    if (!isOpen || !mounted) return null;
 
-    return (
+    const modalContent = (
         <div className={styles.overlay} onClick={onClose}>
             <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
                 <button className={styles.closeBtn} onClick={onClose} aria-label="Close">
@@ -247,6 +253,8 @@ export default function BookingModal({ isOpen, onClose, trekId, trekName, trekPr
                     </form>
                 )}
             </div>
-        </div >
+        </div>
     );
+
+    return createPortal(modalContent, document.body);
 }

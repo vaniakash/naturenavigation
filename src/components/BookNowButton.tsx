@@ -8,7 +8,7 @@ import BookingModal from '@/components/BookingModal';
 interface BookNowButtonProps {
     trekId: string;
     trekName: string;
-    price: number;
+    price: string | number;
 }
 
 export default function BookNowButton({ trekId, trekName, price }: BookNowButtonProps) {
@@ -19,13 +19,13 @@ export default function BookNowButton({ trekId, trekName, price }: BookNowButton
     const handleBookNow = () => {
         if (!session) {
             // Redirect to login if not authenticated
-            router.push('/auth/signin?callbackUrl=/treks/' + trekId);
+            router.push('/login?callbackUrl=/treks/' + trekId);
         } else {
             setIsModalOpen(true);
         }
     };
 
-    // Extract numeric price from string like "₹11,450"
+    // Extract numeric price from string like "₹11,450" or handle number directly
     const numericPrice = typeof price === 'string'
         ? parseInt(price.replace(/[₹,]/g, ''))
         : price;
