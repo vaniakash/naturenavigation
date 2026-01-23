@@ -182,9 +182,9 @@ export default function ContactPage() {
                         <div className={styles.infoSection}>
                             <h3 className={styles.infoTitle}>Call & Email Support</h3>
                             <p className={styles.infoText}>
-                                +91 123 456 7890<br />
-                                support@naturenavigation.com<br />
-                                +91 987 654 3210 (WhatsApp)
+
+                                naturenavigation@gmail.com<br />
+                                +91 95481 77756 (WhatsApp)
                             </p>
                         </div>
 
@@ -193,7 +193,7 @@ export default function ContactPage() {
                             <p className={styles.emergencyText}>
                                 For urgent trekking-related matters and safety queries, please call our dedicated 24/7 emergency line:
                             </p>
-                            <span className={styles.emergencyNumber}>+91 999 888 7777</span>
+                            <span className={styles.emergencyNumber}>+91 95481 77756</span>
                         </div>
 
                         <div className={styles.infoSection}>
@@ -201,7 +201,7 @@ export default function ContactPage() {
                             <p className={styles.infoText}>
                                 <strong>Monday - Friday:</strong> 9 AM - 6 PM IST<br />
                                 <strong>Saturday:</strong> 10 AM - 2 PM IST<br />
-                                <strong>Expected Reply Time:</strong> Within 24 hours
+                                <strong>Expected Reply Time:</strong> Within 2-4 hours
                             </p>
                         </div>
                     </div>
