@@ -3,6 +3,7 @@ import mongoose, { Schema, models, Model } from 'mongoose';
 export interface IBooking {
     _id: string;
     userId: string;
+    trekId: string; // trek slug
     trekName: string;
     date: Date;
     status: 'pending' | 'confirmed' | 'cancelled' | 'completed';
@@ -10,8 +11,11 @@ export interface IBooking {
     amount: number;
     userName: string;
     userEmail: string;
-    phoneNumber?: string;
+    phoneNumber: string;
+    specialRequests?: string;
+    adminNotes?: string;
     createdAt: Date;
+    updatedAt?: Date;
 }
 
 const BookingSchema = new Schema<IBooking>({
@@ -19,6 +23,10 @@ const BookingSchema = new Schema<IBooking>({
         type: String,
         required: true,
         ref: 'User',
+    },
+    trekId: {
+        type: String,
+        required: true,
     },
     trekName: {
         type: String,
@@ -52,10 +60,20 @@ const BookingSchema = new Schema<IBooking>({
     },
     phoneNumber: {
         type: String,
+        required: true,
+    },
+    specialRequests: {
+        type: String,
+    },
+    adminNotes: {
+        type: String,
     },
     createdAt: {
         type: Date,
         default: Date.now,
+    },
+    updatedAt: {
+        type: Date,
     },
 });
 

@@ -2,6 +2,7 @@ import { treksData } from '@/data/treks';
 import { notFound } from 'next/navigation';
 import styles from './trekDetail.module.css';
 import { Mountain, MapPin, Clock, Calendar, TrendingUp, Check, ChevronDown } from 'lucide-react';
+import BookNowButton from '@/components/BookNowButton';
 
 // Force static generation for known paths (optional but good for performance)
 export async function generateStaticParams() {
@@ -200,7 +201,11 @@ export default async function TrekDetailPage(props: { params: Promise<{ slug: st
                             </div>
                         )}
 
-                        <button className={styles.bookBtn}>Book Now</button>
+                        <BookNowButton
+                            trekId={trek.slug}
+                            trekName={trek.name}
+                            price={trek.price || '11450'}
+                        />
                     </div>
                 </div>
 
