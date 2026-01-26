@@ -398,7 +398,7 @@ The valley is steeped in mythology and offers stunning views of Swargarohini pea
         routeMap: '/himachal/AI/rupin-pass-route.webp',
 
         region: 'Himachal Pradesh',
-        difficulty: 'Moderate to Difficult',
+        difficulty: 'Mod to Dif',
         duration: '8 Days',
         durationDays: 8,
         altitude: '15,250 ft',
@@ -1803,6 +1803,253 @@ Unlike the more touristy routes in Garhwal, Pindari retains a sense of pristine 
         trekType: ['Glacier', 'Valley', 'Village', 'Scenic'],
         groupType: ['Intermediate Trekkers', 'Nature Lovers', 'Culture Enthusiasts'],
         fitness: 'Medium',
+        accessibility: 'Moderate'
+    },
+    // Gulabi Kantha Trek
+    {
+        id: 16,
+        slug: 'gulabi-kantha',
+        name: 'Gulabi Kantha Trek',
+        heroTitle: 'Gulabi Kantha',
+        heroSubtitle: 'The Valley of Pink Rhododendrons',
+        image: '/gulabi-kantha-trek.webp',
+        routeMap: '/gulabi-kantha-route.png',
+
+        region: 'Uttarakhand (Yamunotri)',
+        difficulty: 'Easy to Moderate',
+        duration: '5 Days',
+        durationDays: 5,
+        altitude: '12,500 ft',
+        bestSeason: 'May – Jun, Sep – Oct',
+        seasons: ['Summer', 'Autumn'],
+
+        description: 'A hidden gem in the Yamunotri region, famous for its lush meadows and blooming pink rhododendrons.',
+        longDescription: `Gulabi Kantha is a beautiful, offbeat trek located in the Yamunotri region of Uttarakhand. As the name suggests, 'Gulabi' refers to the color pink, and the trek is famous for the abundance of pink rhododendrons that bloom here during spring.
+
+The trail offers majestic views of the Bandarpunch peak and Kalindi Sirk. It passes through dense forests, quaint villages, and vast bugyals (meadows), making it a perfect trek for those looking for serenity away from the crowds.`,
+
+        highlights: [
+            'Views of Bandarpunch and Kalindi peaks',
+            'Blooming pink rhododendrons (in season)',
+            'Lush green meadows',
+            'Offbeat and uncrowded trail',
+            'Rich variety of flora and fauna'
+        ],
+
+        price: '₹7,999',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Not included',
+            transport: 'Available from Dehradun'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Dehradun to Hanuman Chatti',
+                description: 'Drive from Dehradun to Hanuman Chatti. Overnight stay in guesthouse.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Hanuman Chatti to Seema Thatch',
+                description: 'Begin trek through forests to reach Seema Thatch. Overnight camping.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Seema Thatch to Gulabi Kantha',
+                description: 'Trek to the vast meadows of Gulabi Kantha. Enjoy the panoramic views.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Gulabi Kantha to Hanuman Chatti',
+                description: 'Descend back to Hanuman Chatti.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Hanuman Chatti to Dehradun',
+                description: 'Drive back to Dehradun.'
+            }
+        ],
+
+        inclusions: ['Accommodation', 'Meals', 'Permits', 'Guide'],
+        exclusions: ['Transport', 'Personal Gear'],
+        fitnessRequirements: ['Basic fitness required'],
+        trekType: ['Meadow', 'Scenic'],
+        groupType: ['Beginners', 'Nature Lovers'],
+        fitness: 'Low',
+        accessibility: 'Moderate'
+    },
+    // Gidara Bugyal Trek
+    {
+        id: 17,
+        slug: 'gidara-bugyal',
+        name: 'Gidara Bugyal Trek',
+        heroTitle: 'Gidara Bugyal',
+        heroSubtitle: 'The Highest Alpine Meadow in India',
+        image: '/gidara-bugyal-trek.webp',
+        routeMap: '/gidara-bugyal-route.png',
+
+        region: 'Uttarakhand (Garhwal)',
+        difficulty: 'Moderate',
+        duration: '7 Days',
+        durationDays: 7,
+        altitude: '13,900 ft',
+        bestSeason: 'Jun, Sep – Oct',
+        seasons: ['Summer', 'Autumn'],
+
+        description: 'Explore one of the largest and highest alpine meadows in India, offering untouched beauty and solitude.',
+        longDescription: `Gidara Bugyal is often considered one of the most beautiful and expansive high-altitude meadows in Uttarakhand, larger and more pristine than the famous Dayara and Bedni Bugyals.
+
+        Located near Gangotri, this trek takes you through dense forests to vast, rolling green meadows that seem to touch the sky. It offers unobstructed views of Gangotri, Jogin, and Srikanth peaks. Being less commercialized, it offers a raw and peaceful Himalayan experience.`,
+
+        highlights: [
+            'One of the largest high-altitude meadows',
+            'Pristine and uncrowded',
+            'Spectacular views of Gangotri range',
+            'Golden meadows in autumn',
+            'Challenging ridge walks'
+        ],
+
+        price: '₹8,999',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Not included',
+            transport: 'Available from Dehradun'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Dehradun to Bhangeli',
+                description: 'Drive to Bhangeli village via Uttarkashi.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Bhangeli to Rikoda',
+                description: 'Trek through forests to Rikoda campsite.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Rikoda to Dokrani',
+                description: 'Ascend to the Dokrani Bugyal area.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Dokrani to Gidara Top',
+                description: 'Trek to the Gidara Bugyal top. Explore the vast meadows.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Gidara to Thirya',
+                description: 'Descend to Thirya campsite.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Thirya to Bhangeli',
+                description: 'Trek back to Bhangeli village.'
+            },
+            {
+                day: 'Day 7',
+                title: 'Bhangeli to Dehradun',
+                description: 'Drive back to Dehradun.'
+            }
+        ],
+
+        inclusions: ['Accommodation', 'Meals', 'Permits', 'Guide'],
+        exclusions: ['Transport', 'Personal Gear'],
+        fitnessRequirements: ['Good fitness required'],
+        trekType: ['Meadow', 'High Altitude'],
+        groupType: ['Experienced Trekkers'],
+        fitness: 'Medium',
+        accessibility: 'Remote'
+    },
+    // Kashmir Great Lakes Trek
+    {
+        id: 18,
+        slug: 'kashmir-great-lakes',
+        name: 'Kashmir Great Lakes Trek',
+        heroTitle: 'Kashmir Great Lakes',
+        heroSubtitle: 'Paradise on Earth - Seven Alpine Lakes',
+        image: '/kashmir-great-lakes-trek.webp',
+        routeMap: '/great-kashmier-lake-route.png',
+
+        region: 'Kashmir',
+        difficulty: 'Moderate to Difficult',
+        duration: '8 Days',
+        durationDays: 8,
+        altitude: '13,750 ft',
+        bestSeason: 'Jul – Sep',
+        seasons: ['Summer', 'Monsoon'],
+
+        description: 'The most beautiful trek in India, featuring seven turquoise alpine lakes and lush maple forests.',
+        longDescription: `The Kashmir Great Lakes Trek is widely regarded as the prettiest trek in India. It validates Kashmir's title as "Paradise on Earth." The trek takes you through five lush valleys and seven turquoise high-altitude lakes, including the famous Vishansar, Kishansar, Gadsar, Satsar, and Gangabal lakes.
+
+        Every day on this trek offers a new view – from maple forests to alpine meadows and snow-patched passes.`,
+
+        highlights: [
+            'Seven stunning turquoise alpine lakes',
+            'Lush green meadows of Kashmir',
+            'Cross the Gadsar Pass (13,750 ft)',
+            'Views of Mt. Haramukh',
+            'Maple and pine forests'
+        ],
+
+        price: '₹15,800',
+        priceDetails: {
+            gst: '5% applicable',
+            insurance: 'Mandatory',
+            transport: 'From Srinagar'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Srinagar to Sonamarg',
+                description: 'Drive from Srinagar to Sonamarg camp.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Sonamarg to Nichnai',
+                description: 'Trek through maple forests to Nichnai valley.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Nichnai to Vishansar Lake',
+                description: 'Cross Nichnai Pass to reach the stunning Vishansar Lake.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Vishansar to Gadsar',
+                description: 'Cross Gadsar Pass, the highest point, and reach Gadsar Lake.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Gadsar to Satsar',
+                description: 'Trek to Satsar, a collection of seven small lakes.'
+            },
+            {
+                day: 'Day 6',
+                title: 'Satsar to Gangabal',
+                description: 'Trek to the twin lakes of Gangabal and Nundkol.'
+            },
+            {
+                day: 'Day 7',
+                title: 'Gangabal to Naranag',
+                description: 'Descend to Naranag and drive to Srinagar.'
+            },
+            {
+                day: 'Day 8',
+                title: 'Buffer Day',
+                description: 'Buffer day for bad weather.'
+            }
+        ],
+
+        inclusions: ['Accommodation', 'Meals', 'Permits', 'Guide'],
+        exclusions: ['Transport', 'Personal Gear'],
+        fitnessRequirements: ['Good fitness required'],
+        trekType: ['Lake', 'Scenic'],
+        groupType: ['Nature Lovers', 'Photographers'],
+        fitness: 'Medium-High',
         accessibility: 'Moderate'
     }
 ];
