@@ -1,6 +1,13 @@
 import Image from 'next/image';
 import styles from './page.module.css';
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "About Us - Nature Navigation",
+    description: "Learn about Nature Navigation, our mission, and our experienced team led by high-altitude mountaineer Rahul Rawat.",
+};
+
 export default function AboutPage() {
     return (
         <main>

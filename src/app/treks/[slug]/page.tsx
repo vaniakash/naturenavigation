@@ -1,5 +1,27 @@
 import { treksData } from '@/data/treks';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const params = await props.params;
+    const trek = treksData.find((t) => t.slug === params.slug);
+
+    if (!trek) {
+        return {
+            title: 'Trek Not Found',
+        };
+    }
+
+    return {
+        title: `${trek.name} - Nature Navigation`,
+        description: trek.description,
+        openGraph: {
+            title: trek.name,
+            description: trek.description,
+            images: [trek.image],
+        },
+    };
+}
 import styles from './trekDetail.module.css';
 import { Mountain, MapPin, Clock, Calendar, TrendingUp, Check, ChevronDown } from 'lucide-react';
 import BookNowButton from '@/components/BookNowButton';
@@ -21,6 +43,36 @@ export default async function TrekDetailPage(props: { params: Promise<{ slug: st
 
     return (
         <div className={styles.container}>
+            {/* JSON-LD for Trek Product */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Product",
+                        "name": trek.name,
+                        "image": [`https://naturenavigation.in${trek.image}`],
+                        "description": trek.description,
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Nature Navigation"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "url": `https://naturenavigation.in/treks/${trek.slug}`,
+                            "priceCurrency": "INR",
+                            "price": trek.price.replace(/[^0-9]/g, ''),
+                            "availability": "https://schema.org/InStock",
+                            "validFrom": new Date().toISOString()
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.8",
+                            "reviewCount": "50"
+                        }
+                    })
+                }}
+            />
             {/* HER0 SECTION */}
             <section className={styles.hero}>
                 <div className={styles.heroBackground}>

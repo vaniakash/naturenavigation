@@ -47,11 +47,11 @@ export default function Navbar() {
             <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
                 <div className={styles.container}>
                     {/* Logo */}
-                    <Link href="/" className={styles.logoContainer}>
+                    <Link href="/" className={styles.logoContainer} aria-label="Nature Navigation Home">
                         <div className={styles.logoWrapper}>
                             <Image
                                 src="/logo.webp"
-                                alt="Nature Navigation"
+                                alt="Nature Navigation Logo"
                                 fill
                                 className={styles.logoImage}
                                 priority
