@@ -582,6 +582,30 @@
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
         gap: 2rem;
     }
+
+    .ctaContent {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    .ctaTextBlock {
+        margin: 0 auto;
+    }
+
+    .ctaFeatures {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .ctaActions {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -604,28 +628,39 @@
         gap: 2rem;
     }
 
-    .trustTitle {
+    /* Expert CTA Mobile */
+    .expertCTA {
+        margin: 4rem 0;
+        border-radius: 24px;
+    }
+
+    .ctaContent {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .ctaTitle {
         font-size: 2rem;
     }
 
-    .trustGrid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .helpTitle {
-        font-size: 1.75rem;
-    }
-
-    .helpButtons {
+    .ctaFeatures {
         flex-direction: column;
-        gap: 1rem;
+        align-items: flex-start;
+        text-align: left;
     }
 
-    .primaryBtn,
-    .secondaryBtn {
-        width: 100%;
+    .ctaTextBlock {
+        text-align: left;
+    }
+
+    .ctaActions {
+        flex-direction: column;
+    }
+
+    .ctaPrimaryBtn,
+    .ctaSecondaryBtn {
         justify-content: center;
+        width: 100%;
     }
 
     .imageWrapper {
@@ -634,5 +669,10 @@
 
     .destName {
         font-size: 1.5rem;
+    }
+
+    /* Hide decorative background elements on mobile to prevent overflow/distraction */
+    .ctaBg::before {
+        display: none;
     }
 }

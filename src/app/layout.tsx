@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { SessionProvider } from 'next-auth/react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -75,6 +76,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${outfit.variable} ${inter.variable}`}>
         <SessionProvider>
+          <GoogleAnalytics GA_MEASUREMENT_ID="G-XXXXXXXXXX" />
           <Navbar />
           <script
             type="application/ld+json"

@@ -23,6 +23,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
     };
 }
 import styles from './trekDetail.module.css';
+import Image from 'next/image';
 import { Mountain, MapPin, Clock, Calendar, TrendingUp, Check, ChevronDown } from 'lucide-react';
 import BookNowButton from '@/components/BookNowButton';
 
@@ -73,10 +74,47 @@ export default async function TrekDetailPage(props: { params: Promise<{ slug: st
                     })
                 }}
             />
+            {/* JSON-LD for Breadcrumbs */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://naturenavigation.in"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Treks",
+                                "item": "https://naturenavigation.in/treks"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": trek.name,
+                                "item": `https://naturenavigation.in/treks/${trek.slug}`
+                            }
+                        ]
+                    })
+                }}
+            />
+
             {/* HER0 SECTION */}
             <section className={styles.hero}>
                 <div className={styles.heroBackground}>
-                    <img src={trek.image} alt={trek.name} className={styles.heroImage} style={{ width: '100%', height: '100%' }} />
+                    <Image
+                        src={trek.image}
+                        alt={trek.name}
+                        fill
+                        className={styles.heroImage}
+                        priority
+                    />
                 </div>
                 <div className={styles.heroOverlay}></div>
 
