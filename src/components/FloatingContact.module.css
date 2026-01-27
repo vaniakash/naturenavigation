@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 8px 30px -8px rgba(16, 185, 129, 0.6);
-    z-index: 9999;
+    z-index: 99998;
     transition: all 0.3s ease;
 }
 
@@ -134,7 +134,7 @@
 /* Responsive */
 @media (max-width: 640px) {
     .floatingBtn {
-        bottom: 1.5rem;
+        bottom: 5.5rem;
         right: 1.5rem;
         width: 56px;
         height: 56px;
@@ -146,7 +146,7 @@
     }
 
     .popup {
-        bottom: 5.5rem;
+        bottom: 10rem;
         right: 1.5rem;
         width: calc(100vw - 3rem);
         max-width: 320px;

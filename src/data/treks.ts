@@ -88,7 +88,7 @@ The summit offers panoramic views of major Himalayan peaks, making the climb bot
             'Well-planned campsites and gradual ascent'
         ],
 
-        price: '₹11,450',
+        price: '₹6,999',
         priceDetails: {
             gst: '5% GST',
             insurance: '₹180 Trek Insurance',
@@ -695,7 +695,7 @@ What makes Dayara Bugyal special is its versatility - it's beautiful in every se
             'Easy access from Uttarkashi'
         ],
 
-        price: '₹7,950',
+        price: '₹7,999',
         priceDetails: {
             gst: '5% applicable',
             insurance: 'Not included',
@@ -811,7 +811,7 @@ The short duration and gradual ascent make this trek ideal for beginners who wan
             'Ideal for first-time trekkers'
         ],
 
-        price: '₹9,500',
+        price: '₹11,999',
         priceDetails: {
             gst: '5% GST',
             insurance: '₹180 Trek Insurance',
@@ -998,7 +998,7 @@ With river crossings, snow bridges, and panoramic mountain views, Hamta Pass is 
             'Option to visit Chandratal Lake'
         ],
 
-        price: '₹11,500',
+        price: '₹12,999',
         priceDetails: {
             gst: '5% GST',
             insurance: '₹200 Trek Insurance',
@@ -1443,7 +1443,7 @@ This trek is recommended only for experienced trekkers with good fitness and pri
             'Minimal crowds - true wilderness experience'
         ],
 
-        price: '₹15,950',
+        price: '₹12,999',
         priceDetails: {
             gst: '5% applicable',
             insurance: 'Mandatory and not included',
@@ -1578,7 +1578,7 @@ Tapovan is a surreal landscape - a green meadow surrounded by towering peaks and
             'Interact with sadhus meditating in Tapovan'
         ],
 
-        price: '₹14,950',
+        price: '₹14,999',
         priceDetails: {
             gst: '5% applicable',
             insurance: 'Recommended but not included',

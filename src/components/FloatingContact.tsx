@@ -5,8 +5,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X } from 'lucide-react';
 import styles from './FloatingContact.module.css';
 
+import { usePathname } from 'next/navigation';
+
 export default function FloatingContact() {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
+
+    if (pathname !== '/') {
+        return null;
+    }
 
     const whatsappNumber = '+919548177756';
     const whatsappMessage = 'Hi! I am interested in booking a trek with Nature Navigation. Can you help me?';

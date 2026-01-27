@@ -1,0 +1,170 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    padding-top: 6rem;
+    min-height: 80vh;
+}
+
+.backLink {
+    display: inline-block;
+    color: #6b7280;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.backLink:hover {
+    color: #111827;
+}
+
+.header {
+    margin-bottom: 2.5rem;
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    /* Fallback */
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #f3f4f6;
+    color: #4b5563;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.featuredImage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #f3f4f6;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #374151;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+}
+
+.content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.content strong {
+    font-weight: 600;
+    color: #111827;
+}
+
+.footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ctaButton {
+    background: #059669;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.ctaButton:hover {
+    background: #047857;
+}
+
+.secondaryButton {
+    background: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.secondaryButton:hover {
+    background: #f9fafb;
+}

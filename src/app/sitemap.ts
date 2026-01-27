@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { treksData } from '@/data/treks';
+import { blogsData } from '@/data/blogs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://naturenavigation.in';
@@ -9,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '',
         '/about',
         '/treks',
+        '/blog',
         '/gallery',
         '/faq',
         '/contact',
@@ -28,5 +30,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
-    return [...routes, ...trekRoutes];
+    // Dynamic blog routes
+    const blogRoutes = blogsData.map((blog) => ({
+        url: `${baseUrl}/blog/${blog.slug}`,
+        lastModified: new Date(blog.date), // Use blog date as last modified
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+    }));
+
+    return [...routes, ...trekRoutes, ...blogRoutes];
 }

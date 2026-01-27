@@ -23,6 +23,7 @@ export default function MenuPage() {
         { href: '/destinations', label: 'Destinations' },
         { href: '/about', label: 'About' },
         { href: '/gallery', label: 'Gallery' },
+        { href: '/blog', label: 'Blog' },
         { href: '/faq', label: 'FAQ' },
         { href: '/contact', label: 'Contact' },
     ];

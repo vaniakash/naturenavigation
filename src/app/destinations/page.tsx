@@ -1,65 +1,61 @@
+
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin } from 'lucide-react';
-import DestinationsGrid from '@/components/DestinationsGrid';
-import FAQSection from '@/components/FAQSection';
+import Image from 'next/image';
+import Link from 'next/link';
+import { destinationPackages } from '@/data/destinations';
 import styles from './page.module.css';
 
 export default function DestinationsPage() {
     return (
-        <>
-            {/* Simplified Hero Section */}
-            <section className={styles.hero}>
-                <div className={styles.heroBackground} />
-
+        <div className={styles.pageContainer}>
+            {/* HERO SECTION */}
+            <section className={styles.mainHero}>
+                <div className={styles.heroOverlay} />
                 <div className={styles.heroContent}>
-                    <motion.div
-                        className={styles.iconWrapper}
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ type: 'spring', stiffness: 200, delay: 0.2 }}
-                    >
-                        <MapPin className={styles.heroIcon} />
-                    </motion.div>
-
                     <motion.h1
-                        className={styles.heroTitle}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
+                        className={styles.mainTitle}
                     >
-                        Trekking & Spiritual Destinations
+                        Sacred Journeys
                     </motion.h1>
-
-                    <motion.p
-                        className={styles.heroSubtitle}
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
-                    >
-                        Explore Himalayan regions, pilgrimage circuits, and sacred valleys
-                    </motion.p>
-
-                    <motion.div
-                        className={styles.statBadge}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: 0.5 }}
-                    >
-                        <span className={styles.statNumber}>10+</span>
-                        <span className={styles.statLabel}>Destinations Covered</span>
-                    </motion.div>
+                    <p className={styles.mainSubtitle}>Choose your spiritual path in the Himalayas</p>
                 </div>
             </section>
 
-            {/* Destinations Grid */}
-            <DestinationsGrid />
-
-            {/* FAQ Section */}
-            <div style={{ marginBottom: '4rem' }}>
-                <FAQSection />
-            </div>
-        </>
+            {/* PACKAGE SELECTION GRID - Only 2 Main Cards */}
+            <section className={styles.selectionSection}>
+                <div className={styles.gridContainer}>
+                    {destinationPackages.map((pkg, index) => (
+                        <Link href={`/destinations/${pkg.slug}`} key={pkg.id} className={styles.cardLink}>
+                            <motion.div
+                                className={styles.packageCard}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                whileHover={{ y: -10 }}
+                            >
+                                <div className={styles.imageWrapper}>
+                                    <Image
+                                        src={pkg.bannerImage}
+                                        alt={pkg.title}
+                                        fill
+                                        className={styles.cardImage}
+                                    />
+                                    <div className={styles.cardOverlay}>
+                                        <h2>{pkg.title}</h2>
+                                        <p>{pkg.description}</p>
+                                        <span className={styles.exploreBtn}>Explore Package &rarr;</span>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </Link>
+                    ))}
+                </div>
+            </section>
+        </div>
     );
 }
