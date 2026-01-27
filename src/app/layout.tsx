@@ -20,17 +20,17 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://naturenavigation.in'),
   title: {
-    default: "Nature Navigation - Trekking in Uttarakhand",
+    default: "Best Trekking Company in Uttarakhand | Nature Navigation",
     template: "%s | Nature Navigation"
   },
-  description: "Join Nature Navigation for unforgettable trekking experiences across Uttarakhand. Based in Uttarkashi, we organize premium treks throughout the Himalayas.",
-  keywords: ["trekking", "uttarakhand", "uttarkashi", "hiking", "himalaya", "adventure", "nature", "trekking packages", "Kedarkantha", "Valley of Flowers"],
+  description: "Nature Navigation is a trusted trekking company in Uttarakhand offering Kedarkantha, Dayara Bugyal, Har Ki Dun & custom Himalayan treks with certified local guides.",
+  keywords: ["trekking", "uttarakhand", "best trekking company", "Kedarkantha trek", "Har Ki Dun", "Dayara Bugyal", "himalayan treks", "adventure", "nature", "trekking packages"],
   authors: [{ name: "Rahul Rawat" }],
   creator: "Nature Navigation",
   publisher: "Nature Navigation",
   openGraph: {
-    title: "Nature Navigation - Trekking in Uttarakhand",
-    description: "Join Nature Navigation for unforgettable trekking experiences across Uttarakhand. Authorized and experienced trek operators.",
+    title: "Best Trekking Company in Uttarakhand | Nature Navigation",
+    description: "Nature Navigation is a trusted trekking company in Uttarakhand offering Kedarkantha, Dayara Bugyal, Har Ki Dun & custom Himalayan treks with certified local guides.",
     url: 'https://naturenavigation.in',
     siteName: 'Nature Navigation',
     images: [
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Nature Navigation - Trekking in Uttarakhand",
-    description: "Premium trekking experiences in the Himalayas. Book your next adventure with us.",
+    title: "Best Trekking Company in Uttarakhand | Nature Navigation",
+    description: "Nature Navigation is a trusted trekking company in Uttarakhand offering Kedarkantha, Dayara Bugyal, Har Ki Dun & custom Himalayan treks with certified local guides.",
     images: ['/logo.jpg'],
   },
   icons: {
@@ -85,6 +85,7 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "Nature Navigation",
+                "description": "Trusted trekking company in Uttarakhand offering premium Himalayan treks including Kedarkantha, Har Ki Dun, and Dayara Bugyal.",
                 "url": "https://naturenavigation.in",
                 "logo": "https://naturenavigation.in/logo.jpg",
                 "sameAs": [
