@@ -133,29 +133,57 @@ export default async function TrekDetailPage(props: { params: Promise<{ slug: st
                     <section className={styles.quickFacts}>
                         <div className={styles.factCard}>
                             <MapPin className={styles.factIcon} size={24} />
-                            <div className={styles.factLabel}>Region</div>
-                            <div className={styles.factValue}>{trek.region.split('(')[0].trim()}</div>
+                            <div className={styles.factContent}>
+                                <div className={styles.factLabel}>Region</div>
+                                <div className={styles.factValue}>{trek.region.split('(')[0].trim()}</div>
+                            </div>
                         </div>
                         <div className={styles.factCard}>
                             <TrendingUp className={styles.factIcon} size={24} />
-                            <div className={styles.factLabel}>Difficulty</div>
-                            <div className={styles.factValue}>{trek.difficulty}</div>
+                            <div className={styles.factContent}>
+                                <div className={styles.factLabel}>Difficulty</div>
+                                <div className={styles.factValue}>{trek.difficulty}</div>
+                            </div>
                         </div>
                         <div className={styles.factCard}>
                             <Clock className={styles.factIcon} size={24} />
-                            <div className={styles.factLabel}>Duration</div>
-                            <div className={styles.factValue}>{trek.duration.split(' ')[0]} Days</div>
+                            <div className={styles.factContent}>
+                                <div className={styles.factLabel}>Duration</div>
+                                <div className={styles.factValue}>{trek.duration.split(' ')[0]} Days</div>
+                            </div>
                         </div>
                         <div className={styles.factCard}>
                             <Mountain className={styles.factIcon} size={24} />
-                            <div className={styles.factLabel}>Altitude</div>
-                            <div className={styles.factValue}>{trek.altitude.split(' ')[0]}</div>
+                            <div className={styles.factContent}>
+                                <div className={styles.factLabel}>Altitude</div>
+                                <div className={styles.factValue}>{trek.altitude.split(' ')[0]}</div>
+                            </div>
                         </div>
                         <div className={styles.factCard}>
                             <Calendar className={styles.factIcon} size={24} />
-                            <div className={styles.factLabel}>Best Season</div>
-                            <div className={styles.factValue}>Win/Spr</div>
+                            <div className={styles.factContent}>
+                                <div className={styles.factLabel}>Best Season</div>
+                                <div className={styles.factValue}>Win/Spr</div>
+                            </div>
                         </div>
+                        {trek.totalDistance && (
+                            <div className={styles.factCard}>
+                                <TrendingUp className={styles.factIcon} size={24} />
+                                <div className={styles.factContent}>
+                                    <div className={styles.factLabel}>Distance</div>
+                                    <div className={styles.factValue}>{trek.totalDistance}</div>
+                                </div>
+                            </div>
+                        )}
+                        {trek.baseCamp && (
+                            <div className={styles.factCard}>
+                                <MapPin className={styles.factIcon} size={24} />
+                                <div className={styles.factContent}>
+                                    <div className={styles.factLabel}>Base Camp</div>
+                                    <div className={styles.factValue}>{trek.baseCamp}</div>
+                                </div>
+                            </div>
+                        )}
                     </section>
 
                     <hr style={{ margin: '3rem 0', borderColor: '#e2e8f0', opacity: 0.5 }} />
@@ -260,6 +288,27 @@ export default async function TrekDetailPage(props: { params: Promise<{ slug: st
                                             <p>{faq.answer}</p>
                                         </div>
                                     </details>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    <hr style={{ margin: '3rem 0', borderColor: '#e2e8f0', opacity: 0.5 }} />
+
+                    {/* GALLERY */}
+                    {trek.gallery && (
+                        <section className={styles.section}>
+                            <h2 className={styles.sectionTitle}>Gallery</h2>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+                                {trek.gallery.map((img, index) => (
+                                    <div key={index} style={{ position: 'relative', height: '200px', borderRadius: '12px', overflow: 'hidden' }}>
+                                        <Image
+                                            src={img}
+                                            alt={`${trek.name} gallery image ${index + 1}`}
+                                            fill
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    </div>
                                 ))}
                             </div>
                         </section>

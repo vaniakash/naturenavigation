@@ -19,6 +19,11 @@ export interface Trek {
     bestSeason: string; // "Dec–Apr, Oct–Nov"
     seasons?: string[];
 
+    // New Fields
+    totalDistance?: string; // "Approx. 23 km"
+    baseCamp?: string; // "Kotgaon / Gaichawan Gaon"
+    gallery?: string[]; // Array of image paths
+
     // About
     description: string; // Short desc
     longDescription?: string; // Full "About The Trek" text
@@ -62,30 +67,50 @@ export const treksData: Trek[] = [
         id: 1,
         slug: 'kedarkantha',
         name: 'Kedarkantha Trek',
-        heroTitle: 'EXPLORE HIMALAYAN PEAKS',
+        heroTitle: 'THE PERFECT HIMALAYAN SUMMIT',
         heroSubtitle: 'A classic Himalayan summit trek offering snow trails, forest walks, and a rewarding peak climb—ideal for beginners.',
 
-        region: 'Himalaya (Uttarakhand)',
+        region: 'Garhwal Himalaya (Uttarakhand)',
         difficulty: 'Easy – Moderate',
         duration: '6 Days',
         durationDays: 6,
         altitude: '12,500 ft',
-        bestSeason: 'Dec–Apr, Oct–Nov',
+        bestSeason: 'Dec–Apr',
+        seasons: ['Winter', 'Spring'],
+
+        totalDistance: 'Approx. 23 km',
+        baseCamp: 'Kotgaon / Gaichawan Gaon, Uttarakhand',
 
         image: '/kedarkantha.webp',
         routeMap: '/himachal/AI/kedarkantha-route.webp',
+        gallery: ['/kedar.webp', '/kedarkantha.webp', '/kedarkanthab.webp'],
 
         description: 'A classic Himalayan summit trek offering snow trails, forest walks, and a rewarding peak climb—ideal for beginners.',
-        longDescription: `The Kedarkantha Trek is one of the most popular Himalayan treks in India. Known for its scenic forest trails, snow-covered paths in winter, and a thrilling summit climb, it is ideal for first-time trekkers who want to experience a true mountain ascent.
+        longDescription: `The Kedarkantha Trek is one of the most popular and rewarding Himalayan treks in India, especially for beginners who want to experience their first summit climb. Located in the Garhwal Himalayas of Uttarakhand, this trek offers a perfect balance of adventure, scenic beauty, and accessibility.
 
-The summit offers panoramic views of major Himalayan peaks, making the climb both challenging and deeply rewarding.`,
+What makes Kedarkantha special is that the summit remains visible for most of the trek, constantly motivating trekkers as they walk through dense forests, open clearings, and snow-covered trails.
+
+**The Kedarkantha Experience**
+
+*Forest Trails & Clearings*
+The trek begins from picturesque Himalayan villages and quickly enters dense forests of pine, oak, and maple. These forests feel untouched and peaceful, offering a raw Himalayan experience. Along the way, trekkers come across wide open clearings that serve as stunning campsites with panoramic mountain views.
+
+*The Summit Climb*
+The final ascent to the Kedarkantha summit is steep and thrilling, especially in winter when the trail is covered in snow. While challenging, it is well within reach for beginners with basic fitness. Standing at the summit provides a deep sense of achievement, with sweeping views of the surrounding Himalayan ranges.
+
+*Seasonal Beauty*
+• Winter: Snow-covered trails and magical white landscapes
+• Spring: Blooming rhododendrons and vibrant forests
+• Summer: Lush meadows and clear mountain views
+• Autumn: Golden forests and crystal-clear skies`,
 
         highlights: [
-            'One of the best beginner-friendly summit treks',
-            'Snow trekking during winter months',
-            'Dense pine and oak forests',
-            'Clear summit views of Himalayan ranges',
-            'Well-planned campsites and gradual ascent'
+            'Non-technical summit climb ideal for beginners',
+            'Constant views of the summit throughout the trek',
+            'Dense pine, oak, and maple forests',
+            'Stunning campsites in open clearings',
+            'Thrilling summit climb with 360° Himalayan views',
+            'Accessible in winter with beautiful snow landscapes'
         ],
 
         price: '₹6,999',
@@ -99,30 +124,40 @@ The summit offers panoramic views of major Himalayan peaks, making the climb bot
             {
                 day: 'Day 1',
                 title: 'Arrival',
-                description: 'Arrival at Sankri / Kotgaon area. Briefing and preparation.'
+                description: 'Arrival at Sankri / Kotgaon / Gaichawan Gaon. Briefing and preparation.'
             },
             {
                 day: 'Day 2',
-                title: 'Trek to Camp',
-                description: 'Trek through forest trails to the first campsite.'
+                title: 'Trek to First Campsite',
+                description: 'Trek through dense forests of pine and oak. Reach the first campsite in a clearing.'
             },
             {
-                day: 'Day 3–5',
-                title: 'Trek Days',
-                description: 'Gradual ascent, acclimatization, and summit attempt.'
+                day: 'Day 3',
+                title: 'Trek to Base Camp',
+                description: 'Ascend further to the base camp. Enjoy panoramic views and acclimatize.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Summit Day',
+                description: 'Early morning push for the summit. Experience the sunrise from the top and descend to camp.'
+            },
+            {
+                day: 'Day 5',
+                title: 'Descend to Base Village',
+                description: 'Trek back down to the base village through the beautiful forest trails.'
             },
             {
                 day: 'Day 6',
                 title: 'Departure',
-                description: 'Descent and return to Dehradun.'
+                description: 'Departure from Sankri / Kotgaon.'
             }
         ],
 
         inclusions: [
-            'Accommodation during the trek',
+            'Accommodation (Tents)',
             'All meals while on trek (Veg)',
             'Trek permits and forest camping charges',
-            'Mountaineering qualified and experienced Trek Leader, Guide, and Support Staff',
+            'Mountaineering qualified Trek Leader, Guide, and Support Staff',
             'First aid medical kits, stretcher, and oxygen cylinder'
         ],
         exclusions: [
@@ -132,31 +167,32 @@ The summit offers panoramic views of major Himalayan peaks, making the climb bot
         ],
 
         fitnessRequirements: [
-            'Ability to trek 5–6 hours daily',
-            'Basic cardio fitness',
-            'Preparation before the trek is recommended'
+            'Walk 5 km in 38–40 minutes',
+            'Carry a light backpack',
+            'Be comfortable with daily walking for multiple days',
+            'Basic cardio preparation for 4–6 weeks is recommended'
         ],
 
         faqs: [
             {
-                question: 'What is generally included?',
-                answer: 'Accommodation, meals, permits, and expert guides are included.'
+                question: 'Why is Kedarkantha perfect for beginners?',
+                answer: 'It offers a non-technical summit climb, well-defined trails, excellent campsites, safe altitude gain, and stunning summit views.'
             },
             {
-                question: 'How fit do I need to be?',
-                answer: 'You should be able to walk 5-6 hours a day. Basic cardio exercises 1 month prior are recommended.'
+                question: 'What is the best time to do this trek?',
+                answer: 'December to February is best for snow lovers. March to April for spring forests. May to June for green landscapes.'
             },
             {
-                question: 'Is this trek suitable for beginners?',
-                answer: 'Yes, Kedarkantha is considered one of the best treks for beginners due to its gradual ascent and rewarding views.'
+                question: 'What is the accommodation like?',
+                answer: 'Accommodation is in tents during the trek.'
             }
         ],
 
         // Legacy/Existing fields
-        seasons: ['Winter', 'Spring'],
-        trekType: ['Snow trek', 'Summit'],
-        groupType: ['Beginners', 'Solo-friendly'],
-        fitness: 'Medium',
+
+        trekType: ['Snow trek', 'Summit', 'Forest'],
+        groupType: ['Beginners', 'Solo-friendly', 'Family'],
+        fitness: 'Easy to Moderate',
         accessibility: 'Easy road access'
     },
     {
@@ -890,7 +926,6 @@ The short duration and gradual ascent make this trek ideal for beginners who wan
         durationDays: 2,
         altitude: '9,300 ft',
         bestSeason: 'Mar – Nov',
-        seasons: ['Spring', 'Summer', 'Autumn'],
 
         image: '/himachal/dainkund-trek-himachal.webp',
         routeMap: '/himachal/AI/daikund-route.webp',
