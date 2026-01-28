@@ -118,6 +118,283 @@
     transform: translateX(5px);
 }
 
+/* --- NEW SECTIONS STYLES --- */
+
+/* Common Section Padding */
+.sectionPadding {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1e293b;
+}
+
+.sectionTitle span {
+    color: #10b981;
+    /* Emerald accent */
+}
+
+/* 1. Why Choose Section */
+.whyChooseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.trustItem {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #f1f5f9;
+}
+
+.trustItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.trustIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.trustTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #334155;
+}
+
+.trustDesc {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* 2. Comparison Table */
+.comparisonContainer {
+    overflow-x: auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+}
+
+.comparisonTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.comparisonTable th,
+.comparisonTable td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.comparisonTable th {
+    font-size: 1.1rem;
+    color: #475569;
+    font-weight: 600;
+    width: 25%;
+}
+
+.comparisonTable td:first-child {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.comparisonTable td {
+    font-size: 1rem;
+    color: #334155;
+}
+
+/* 3. Spiritual Significance */
+.spiritualGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.spiritualBlock {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.spiritualBlock::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #10b981, #34d399);
+}
+
+.spiritualBlock h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #0f172a;
+}
+
+.spiritualBlock p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* 4. Map Section */
+.mapPlaceholder {
+    background: #eef2f6;
+    border-radius: 24px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-weight: 500;
+    border: 2px dashed #cbd5e1;
+    position: relative;
+    overflow: hidden;
+}
+
+.mapSVG {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 5. Best Time to Visit */
+.timelineGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.timelineCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid #10b981;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.timelineCard.monsoon {
+    border-left-color: #f59e0b;
+}
+
+.timelineCard.cold {
+    border-left-color: #3b82f6;
+}
+
+.timelineMonth {
+    font-weight: 700;
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.timelineDesc {
+    color: #64748b;
+}
+
+/* 6. FAQ Section */
+.faqContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faqItem {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+}
+
+.faqQuestion {
+    padding: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.faqQuestion:hover {
+    background: #f8fafc;
+}
+
+.faqAnswer {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* 7. CTA Section */
+.ctaSection {
+    background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+    padding: 6rem 2rem;
+    text-align: center;
+    color: white;
+    margin-top: 4rem;
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s;
+    font-size: 1.1rem;
+}
+
+.primaryBtn {
+    background: #10b981;
+    color: white;
+}
+
+.secondaryBtn {
+    background: transparent;
+    border: 2px solid #10b981;
+    color: #10b981;
+}
+
+.primaryBtn:hover,
+.secondaryBtn:hover {
+    transform: translateY(-3px);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .mainHero {
@@ -143,5 +420,21 @@
 
     .cardOverlay h2 {
         font-size: 1.75rem;
+    }
+
+    .sectionPadding {
+        padding: 4rem 1.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .spiritualGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparisonContainer {
+        padding: 1rem;
     }
 }
