@@ -1840,80 +1840,6 @@ Unlike the more touristy routes in Garhwal, Pindari retains a sense of pristine 
         fitness: 'Medium',
         accessibility: 'Moderate'
     },
-    // Gulabi Kantha Trek
-    {
-        id: 16,
-        slug: 'gulabi-kantha',
-        name: 'Gulabi Kantha Trek',
-        heroTitle: 'Gulabi Kantha',
-        heroSubtitle: 'The Valley of Pink Rhododendrons',
-        image: '/gulabi-kantha-trek.webp',
-        routeMap: '/gulabi-kantha-route.png',
-
-        region: 'Uttarakhand (Yamunotri)',
-        difficulty: 'Easy to Moderate',
-        duration: '5 Days',
-        durationDays: 5,
-        altitude: '12,500 ft',
-        bestSeason: 'May – Jun, Sep – Oct',
-        seasons: ['Summer', 'Autumn'],
-
-        description: 'A hidden gem in the Yamunotri region, famous for its lush meadows and blooming pink rhododendrons.',
-        longDescription: `Gulabi Kantha is a beautiful, offbeat trek located in the Yamunotri region of Uttarakhand. As the name suggests, 'Gulabi' refers to the color pink, and the trek is famous for the abundance of pink rhododendrons that bloom here during spring.
-
-The trail offers majestic views of the Bandarpunch peak and Kalindi Sirk. It passes through dense forests, quaint villages, and vast bugyals (meadows), making it a perfect trek for those looking for serenity away from the crowds.`,
-
-        highlights: [
-            'Views of Bandarpunch and Kalindi peaks',
-            'Blooming pink rhododendrons (in season)',
-            'Lush green meadows',
-            'Offbeat and uncrowded trail',
-            'Rich variety of flora and fauna'
-        ],
-
-        price: '₹7,999',
-        priceDetails: {
-            gst: '5% applicable',
-            insurance: 'Not included',
-            transport: 'Available from Dehradun'
-        },
-
-        itinerary: [
-            {
-                day: 'Day 1',
-                title: 'Dehradun to Hanuman Chatti',
-                description: 'Drive from Dehradun to Hanuman Chatti. Overnight stay in guesthouse.'
-            },
-            {
-                day: 'Day 2',
-                title: 'Hanuman Chatti to Seema Thatch',
-                description: 'Begin trek through forests to reach Seema Thatch. Overnight camping.'
-            },
-            {
-                day: 'Day 3',
-                title: 'Seema Thatch to Gulabi Kantha',
-                description: 'Trek to the vast meadows of Gulabi Kantha. Enjoy the panoramic views.'
-            },
-            {
-                day: 'Day 4',
-                title: 'Gulabi Kantha to Hanuman Chatti',
-                description: 'Descend back to Hanuman Chatti.'
-            },
-            {
-                day: 'Day 5',
-                title: 'Hanuman Chatti to Dehradun',
-                description: 'Drive back to Dehradun.'
-            }
-        ],
-
-        inclusions: ['Accommodation', 'Meals', 'Permits', 'Guide'],
-        exclusions: ['Transport', 'Personal Gear'],
-        fitnessRequirements: ['Basic fitness required'],
-        trekType: ['Meadow', 'Scenic'],
-        groupType: ['Beginners', 'Nature Lovers'],
-        fitness: 'Low',
-        accessibility: 'Moderate'
-    },
     // Gidara Bugyal Trek
     {
         id: 17,
@@ -2086,5 +2012,125 @@ The trail offers majestic views of the Bandarpunch peak and Kalindi Sirk. It pas
         groupType: ['Nature Lovers', 'Photographers'],
         fitness: 'Medium-High',
         accessibility: 'Moderate'
+    },
+    {
+        id: 19,
+        slug: 'gulabi-kantha',
+        name: 'Gulabi Kantha Trek',
+        heroTitle: 'THE HIDDEN HIMALAYAN RIDGE',
+        heroSubtitle: 'A lesser-known ridge trek in the Garhwal Himalayas offering vast meadows, dramatic mountain views, and peaceful forest trails—perfect for trekkers seeking solitude.',
+
+        region: 'Garhwal Himalaya',
+        difficulty: 'Easy – Moderate',
+        duration: '4 Days',
+        durationDays: 4,
+        altitude: '12,000 ft',
+        bestSeason: 'Spring / Summer / Autumn',
+        seasons: ['Spring', 'Summer', 'Autumn'],
+
+        totalDistance: 'Approx. 18–20 km',
+        baseCamp: 'Khanyasni Village, Uttarkashi, Uttarakhand',
+
+        image: '/gulabi-kantha-trek.jpeg',
+        routeMap: '/gulabi-kantha-route.png',
+        gallery: [
+            '/gulabi-kantha-trek.jpeg',
+            '/gulabi-kantha.jpeg',
+            '/gulabikantahab.jpeg'
+        ],
+
+        description: 'A lesser-known ridge trek in the Garhwal Himalayas offering vast meadows, dramatic mountain views, and peaceful forest trails.',
+        longDescription: `The Gulabi Kantha Trek is a hidden gem in the Garhwal Himalayas, offering sweeping ridge walks, dense forest trails, and breathtaking panoramic views. Unlike more crowded Himalayan treks, Gulabi Kantha provides a quieter and more intimate mountain experience.
+
+This trek is ideal for beginners and nature lovers who want to experience alpine meadows without extreme altitude challenges. The summit ridge opens up to stunning views of Bandarpoonch, Srikanth Peak, Black Peak, and the Gangotri range.
+
+The highlight of the trek is walking along the wide, open ridge, where 360° views surround you on all sides.
+
+**The Gulabi Kantha Experience**
+
+*Forest Trails & Meadows*
+The trail begins from charming Himalayan villages and enters dense forests of oak and rhododendron. As you ascend, the forest gradually opens into vast alpine meadows offering uninterrupted Himalayan views.
+
+*The Ridge Walk*
+The summit ridge of Gulabi Kantha is wide and scenic, making it one of the most rewarding ridge walks in the region. The final stretch is gradual and non-technical, suitable for trekkers with basic fitness.
+
+*Seasonal Beauty*
+• Spring: Rhododendron blooms and vibrant greenery
+• Summer: Lush meadows and pleasant weather
+• Autumn: Clear skies with sharp mountain views
+• Winter: Light snow transforms the landscape (season dependent)`,
+
+        highlights: [
+            'Peaceful and less-crowded Himalayan trail',
+            'Beautiful ridge walk with panoramic views',
+            'Dense oak and rhododendron forests',
+            'Beginner-friendly summit experience',
+            'Ideal for short Himalayan getaway',
+            'Perfect mix of forest, meadow, and ridge terrain'
+        ],
+
+        price: '₹7,499',
+        priceDetails: {
+            gst: '5% GST',
+            insurance: '₹180 Trek Insurance',
+            transport: '₹2,200 Transport (Basecamp – Optional)'
+        },
+
+        itinerary: [
+            {
+                day: 'Day 1',
+                title: 'Arrival',
+                description: 'Arrival at Khanyasni Village. Trek briefing and preparation.'
+            },
+            {
+                day: 'Day 2',
+                title: 'Trek to Campsite',
+                description: 'Gradual ascent through forest to alpine meadows.'
+            },
+            {
+                day: 'Day 3',
+                title: 'Summit Day',
+                description: 'Early morning summit push. Enjoy panoramic ridge views. Return to campsite.'
+            },
+            {
+                day: 'Day 4',
+                title: 'Descend & Departure',
+                description: 'Descend to base village and departure.'
+            }
+        ],
+
+        inclusions: [
+            'Accommodation in tents',
+            'Meals during the trek',
+            'Certified trek leader',
+            'First aid & safety equipment',
+            'Forest permits'
+        ],
+        exclusions: [
+            'Transport to base village (optional add-on)',
+            'Personal expenses',
+            'Backpack offloading (optional)',
+            'Trek insurance'
+        ],
+
+        faqs: [
+            {
+                question: 'Is Gulabi Kantha suitable for beginners?',
+                answer: 'Yes. The trek is moderate but manageable with basic fitness preparation.'
+            },
+            {
+                question: 'What is the best time to do this trek?',
+                answer: 'Spring (April–June) and Autumn (September–November) offer the best weather and views.'
+            },
+            {
+                question: 'What kind of accommodation is provided?',
+                answer: 'Trekkers stay in alpine tents during the trek.'
+            }
+        ],
+
+        trekType: ['Ridge', 'Meadows', 'Forest'],
+        groupType: ['Beginners', 'Nature Lovers', 'Short Duration'],
+        fitness: 'Easy to Moderate',
+        accessibility: 'Road accessible base'
     }
 ];
